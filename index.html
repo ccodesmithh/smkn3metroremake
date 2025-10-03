@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Negeri 3 Metro - Beranda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Chat Bubble -->
+    <div class="chat-bubble" id="chatBubble">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <!-- Chat Window -->
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <h3>Masyud</h3>
+                <p>Tanyakan apapun tentang SMK Negeri 3 Metro <br>Masyud mungkin memberikan info yang tidak akurat. Harap periksa info penting. <a href="#">Pelajari lebih lanjut</a></p>
+            </div>
+            <button class="chat-close" id="chatClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="messages">
+            <div class="chat-welcome">
+                <i class="fas fa-robot"></i>
+                <h4>Halo! Aku Masyud 👋</h4>
+                <p>Ada yang bisa saya bantu?</p>
+            </div>
+        </div>
+        <form class="chat-form" id="message-form">
+            <input type="text" class="chat-input" id="message-input" placeholder="Ketik pesan Anda..." autocomplete="off">
+            <button type="submit" class="chat-submit">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+    <!-- Sok inggris ga apa lah ya aowkoakwoaok -->
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-icon">S3M</div>
+                <div class="logo-text">
+                    <h3>SMK Negeri 3 Metro</h3>
+                    <p>Yudha Ganteng</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Beranda</a></li>
+                <li><a href="#">Profil</a></li>
+                <li><a href="#">Jurusan</a></li>
+                <li><a href="#">Prestasi</a></li>
+                <li><a href="#">Galeri</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>9 Program Keahlian<br>Unggulan</h1>
+            <p class="hero-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, quibusdam!</p>
+            <p class="hero-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, corrupti?</p>
+            <a href="#programs" class="btn-primary">
+                Lihat Semua Jurusan
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="stat-number">9</div>
+                <div class="stat-label">Program Keahlian</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Siswa Aktif</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Prestasi</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="stat-number">30+</div>
+                <div class="stat-label">Fasilitas</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>Tentang SMK Negeri 3 Metro</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aliquam eius mollitia dolor voluptatum nisi pariatur iusto dolorem necessitatibus ullam quae quia quidem qui incidunt doloribus labore nihil, possimus facilis.</p>
+                
+                <ul class="about-features">
+                    <li>
+                        <h4><i class="fas fa-check-circle"></i> Visi Kami</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nisi, enim quis pariatur ea laborum voluptates quasi repellat culpa voluptatum soluta consequuntur commodi unde consequatur ex quo. Voluptatem, distinctio magni?</p>
+                    </li>
+                    <li>
+                        <h4><i class="fas fa-check-circle"></i> Misi Kami</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur facilis nobis vero voluptas tempora? Nostrum impedit nobis temporibus, obcaecati enim culpa sed, consectetur inventore explicabo, iste eos quis soluta totam.</p>
+                    </li>
+                </ul>
+
+                <a href="#" class="btn-secondary">
+                    Pelajari Lebih Lanjut
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600" alt="SMK Negeri 3 Metro">
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs" id="programs">
+        <div class="section-header">
+            <h2>Program Keahlian</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, reiciendis?</p>
+        </div>
+        <div class="programs-grid">
+            <div class="program-card">
+                <div class="program-icon">RPL</div>
+                <h3>Rekayasa Perangkat Lunak dan Gim</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste obcaecati, recusandae quam totam sed necessitatibus.</p>
+                <a href="#" class="program-link">
+                    Pelajari Lebih Lanjut
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">DKV</div>
+                <h3>Desain Komunikasi Visual</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolorem architecto quis beatae. Sint, soluta.</p>
+                <a href="#" class="program-link">
+                    Pelajari Lebih Lanjut
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">TKJ</div>
+                <h3>Teknik Jaringan Komputer</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi ad veniam, necessitatibus cumque illo labore.</p>
+                <a href="#" class="program-link">
+                    Pelajari Lebih Lanjut
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">TM</div>
+                <h3>Teknik Mesin</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam animi, labore eligendi ratione error sint.</p>
+                <a href="#" class="program-link">
+                    Pelajari Lebih Lanjut
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">TKL</div>
+                <h3>Teknik Ketenagaan Listrik</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi recusandae, nihil inventore labore commodi earum.</p>
+                <a href="#" class="program-link">
+                    Pelajari Lebih Lanjut
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">TKP</div>
+                <h3>Teknik Konstruksi Pembangunan</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste ab amet quaerat debitis at reiciendis!</p>
+                <a href="#" class="program-link">
+                    Pelajari Lebih Lanjut
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="btn-center">
+            <a href="#" class="btn-primary">
+                Lihat Semua Program
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio tenetur facere, quod similique voluptate veritatis sequi error expedita vero recusandae quaerat ipsam inventore magni dolorem minima provident tempore architecto iusto!</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-white">
+                    <i class="fas fa-phone"></i>
+                    Hubungi Kami
+                </a>
+                <a href="#" class="btn-outline">
+                    <i class="fas fa-file-alt"></i>
+                    Lihat Prestasi
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>SMK Negeri 3 Metro</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nemo odit doloremque ad alias? Iure aperiam illo eligendi modi id dignissimos voluptatem reiciendis ipsa incidunt? Magnam excepturi provident obcaecati delectus!</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Menu Utama</h4>
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Profil Sekolah</a></li>
+                    <li><a href="#">Program Keahlian</a></li>
+                    <li><a href="#">Fasilitas</a></li>
+                    <li><a href="#">Galeri</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Program Keahlian</h4>
+                <ul>
+                    <li><a href="#">RPL</a></li>
+                    <li><a href="#">DKV</a></li>
+                    <li><a href="#">TKJ</a></li>
+                    <li><a href="#">TM</a></li>
+                    <li><a href="#">TKL</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Kontak</h4>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Jl.in aja dulu, Kota Metro, Lampung</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>+12345567890</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>smktekno.lampung@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 SMK Negeri 3 Metro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module">
+    // Import modul GoogleGenerativeAI
+    import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
+
+    // API key untuk autentikasi ke layanan Google Generative AI
+    const API_KEY = "Rahasia yaa....";
+
+
+    // Pasang event listener di form dengan id 'message-form' buat submit
+    document.getElementById('message-form').addEventListener('submit', async function(event) {
+        event.preventDefault(); // Mencegah reload halamansaat form disubmit
+        const messageInput = document.getElementById('message-input'); // Ambil input dari user
+        const userMessage = messageInput.value; // Ambil value inputan
+        if (!userMessage.trim()) return; // Kalo Inputan kosong, hentikan prroses
+        const messagesDiv = document.getElementById('messages'); // Ambil elemen untuk namppilin pesan
+
+        // Buat elemen paragraf baru untuk pesan user trus tambahkan ke messagesDiv
+        const userP = document.createElement('p');
+        userP.innerHTML = `<strong>Ente:</strong> ${userMessage}`;
+        messagesDiv.appendChild(userP);
+
+        // Scroll ke bawah biar pesan terbaru terlihat
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        messageInput.value = ''; // Kosongkan input pesan
+
+        try {
+            // Baca Context
+            const response = await fetch('context.txt');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.text();
+            const komplit = data + userMessage;
+            // Inisialisasi GoogleGenerativeAI pake API key
+            const genAI = new GoogleGenerativeAI(API_KEY);
+            // model generatif yang bklan digunakan
+            const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+            // Minta model buat generate konten berdasarkan full konteks user
+            const result = await model.generateContent(komplit);
+            // Ambil response dari hasil generate konten
+            const myresponse = await result.response;
+            // Ambil teks dari response
+            const text = myresponse.text();
+
+            // Buat elemen paragraf baru buat balasan AI terus tambahkan ke messagesDiv
+            const aiP = document.createElement('p');
+            aiP.innerHTML = `<strong>Masyud:</strong> ${text}`;
+            messagesDiv.appendChild(aiP);
+
+            // Scroll ke bawah agar balasan AI terlihat
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        } catch (error) {
+            // Error Handling
+            console.error("Kaga bisa generate wak! Error:", error);
+            document.getElementById('messages').innerHTML += `<p style="color: red;">Ada yang salah dah keknya. Error: ${error.message}.</p>`;
+        }
+    });
+    </script>
+
+    <script>
+    // Toggle chat window visibility
+    // Ambil elemen chat bubble, chat window, dan tombol close
+    const chatBubble = document.getElementById('chatBubble');
+    const chatWindow = document.getElementById('chatWindow');
+    const chatClose = document.getElementById('chatClose');
+
+    // Kalo chat bubble diklik, tampilkan chat window dan sembunyikan chat bubble
+    chatBubble.addEventListener('click', () => {
+        chatWindow.classList.add('active');
+        chatBubble.classList.add('active');
+    });
+
+    // Kalo tombol close diklik, sembunyikan chat window dan tampilkan chat bubble
+    chatClose.addEventListener('click', () => {
+        chatWindow.classList.remove('active');
+        chatBubble.classList.remove('active');
+    });
+    </script>
+
+</body>
+</html>
