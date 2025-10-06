@@ -269,15 +269,14 @@ nav {
 
 .about-image img {
     width: 100%;
+    position: relative;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .about-name {
-    position: absolute;
     z-index: 999999;
-    bottom: -42rem;
-    right: 35rem;
+    width: 100%;
     background: rgba(255, 255, 255, 0.442);
     backdrop-filter: blur(10px);
     padding: 5px 10px;
@@ -285,6 +284,36 @@ nav {
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 
+
+.shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(130deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 3.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+
+.displayName{
+    bottom:0;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 .about-name h3 {
     margin: 0;
     font-size: 16px;
@@ -621,8 +650,21 @@ footer {
     box-shadow: 0 5px 20px rgba(0,168,107,0.4);
     z-index: 9999;
     transition: transform 0.3s, box-shadow 0.3s;
+    animation: bubble 1s ease-in-out infinite;
 }
-
+@keyframes bubble {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 5px 20px rgba(0,168,107,0.4);
+  }50%{
+    transform: scale(1.05);
+    box-shadow: 0 5px 25px rgba(0,168,107,0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 5px 20px rgba(0,168,107,0.4);
+  }
+}
 .chat-bubble:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 25px rgba(0,168,107,0.6);
