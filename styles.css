@@ -98,26 +98,27 @@ nav {
     background-size: cover;
 }
 
-.hero-content {
+.caption-conten {
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
 }
 
-.hero h1 {
+.caption-conten h1 {
     font-size: 3rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
 
-.hero-subtitle {
+.caption-conten .hero-subtitle {
     color: #7fffd4;
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
-.hero-description {
+.caption-conten .hero-description{
     font-size: 1rem;
     margin-bottom: 2rem;
     opacity: 0.9;
@@ -164,7 +165,7 @@ nav {
 .stats {
     background: white;
     padding: 40px 5%;
-    margin-top: -60px;
+    margin-top: 0;
     position: relative;
     z-index: 10;
 }
