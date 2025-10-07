@@ -1,3 +1,30 @@
+ /* @keyframes typing {
+    0% {
+      width: 0;
+      visibility: hidden;
+    }
+    100% {
+      width: 30ch;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+    100% {
+      border-color: white;
+    }
+  }
+
+  .animate-typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    animation: typing 2s steps(20) 1s 1 normal both, blink 0.7s step-end infinite;
+  } */
+
 * {
     margin: 0;
     padding: 0;
@@ -117,6 +144,8 @@ nav {
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
+
+
 
 .caption-conten .hero-description{
     font-size: 1rem;
@@ -290,6 +319,7 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
+  transition: all 1s;
   width: 100%;
   height: 100%;
   background: linear-gradient(130deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 75%);
@@ -306,6 +336,8 @@ nav {
     background-position: -200% 0;
   }
 }
+
+
 
 
 .displayName{
@@ -883,5 +915,11 @@ footer {
     .chat-bubble {
         left: 20px;
         bottom: 20px;
+    }
+    .caption-conten p{
+        display: none;
+    }
+    .caption-conten h1{
+        margin-bottom: 2rem;
     }
 }
