@@ -3,7 +3,9 @@ AOS.init()
 let slidlay = document.querySelector('.slider-container')
 let sliders = document.querySelectorAll('.slider')
 let h4 = document.querySelectorAll('.h')
-let p4 = document.querySelectorAll('.p')
+let p1 = document.querySelectorAll('.p1')
+let p2 = document.querySelectorAll('.p2')
+let Bt = document.querySelectorAll('.Bt')
 let dotsContainer = document.querySelector('.dots-container')
 let nextBtn = document.querySelector('.nav.next')
 let prevBtn = document.querySelector('.nav.prev')
@@ -24,13 +26,21 @@ function showSlider(index) {
         dotsContainer.children[index].classList.add('active')
     }
     h4.forEach((h) =>{
-        h.classList.add('naik')
+        h.classList.add('animateH')
     })
-    h4[index].classList.remove('naik')
-    p4.forEach((p) =>{
-        p.classList.add('naik')
+    h4[index].classList.remove('animateH')
+    p1.forEach((p) =>{
+        p.classList.add('animateP')
     })
-    p4[index].classList.remove('naik')
+    p1[index].classList.remove('animateP')
+    p2.forEach((p) =>{
+        p.classList.add('animateP')
+    })
+    p2[index].classList.remove('animateP')
+    Bt.forEach((p) =>{
+        p.classList.add('animateBt')
+    })
+    Bt[index].classList.remove('animateBt')
 
 }
 
