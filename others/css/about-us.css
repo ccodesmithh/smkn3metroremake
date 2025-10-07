@@ -128,6 +128,7 @@ nav {
 .btn-primary {
     background: #00a86b;
     border: 2px solid #00a86b;
+    color: white;
     border-radius: 10px;
     padding: 5px 25px;
     text-decoration: none;
@@ -311,7 +312,7 @@ nav {
 
 .team-card {
     background: white;
-    border-radius: 18px;
+    border-radius: 10px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.12);
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -557,4 +558,47 @@ nav {
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 4rem;
+}
+
+footer {
+    padding-top: 5rem;
+    background-color: #e5e7eb;
+    padding: 2rem 0;
+}
+
+footer .container .header {
+    text-align: center;
+    color: #333;
+}
+footer .container .footer-buttons {
+    text-align: center;
+    margin: 2rem 0;
+    color: #333;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.foot {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.foot .contact h4 {
+    margin-bottom: 1rem;
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.operational h4 {
+    margin-bottom: 1rem;
 }
