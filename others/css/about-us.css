@@ -8,6 +8,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     line-height: 1.6;
+    background-color: #f1f1f1;
 }
 
 /* Header & Navigation */
@@ -80,6 +81,7 @@ nav {
 
 
 /* Hero Section */
+
 .hero-content .title {
     margin-top: 2rem;
     text-align: center;
@@ -176,15 +178,14 @@ nav {
 
 /* Stats Section */
 .stats {
-    background: white;
-    padding: 40px 5%;
-    margin-top: 0;
+    padding: 40px 2%;
+    margin-top: 2rem;
     position: relative;
     z-index: 10;
 }
 
 .stats-container {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -209,11 +210,11 @@ nav {
     align-items: center;
     justify-content: center;
     margin: 0 auto 15px;
-    font-size: 24px;
+    font-size: 15px;
 }
 
 .stat-title {
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #333;
 }
@@ -221,5 +222,269 @@ nav {
 .stat-label {
     color: #666;
     font-size: 14px;
+}
+
+/* Info Section */
+
+.info {
+    background: #ffffff;
+    padding: 50px 5%;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.info-card {
+    text-align: center;
+    padding: 50px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    color: #00a86b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 50px;
+}
+
+.info-numbers {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.info-label {
+    color: #666;
+    font-size: 14px;
+}
+
+.highlight {
+    color: #006842;;
+}
+
+/* Team Section */
+
+.team {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.team-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 30px 25px 20px;
+}
+
+.team-image-profile {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #666;
+    background: white;
+}
+
+.team-image-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details {
+    flex: 1;
+}
+
+.team-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.team-name h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.team-duration {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #6b7280;
+    font-size: 13px;
+    margin-left: auto;
+}
+
+.team-duration i {
+    font-size: 12px;
+}
+
+.team-role {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+.team-cat {
+    display: inline-block;
+    color: #4b5563;
+    font-size: 12px;
+    background-color: #e5e7eb;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.team-buttons {
+    display: flex;
+    gap: 0;
+    padding: 0 25px;
+    margin-top: 20px;
+    border-bottom: 2px solid #f3f4f6;
+}
+
+.team-buttons a {
+    flex: 1;
+    text-align: center;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #6b7280;
+    font-size: 12px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.team-buttons a.active {
+    background-color: #10b981;
+    color: white;
+    border-radius: 40px;
+    padding: auto;
+}
+
+
+.team-buttons a:hover {
+    background-color: #10b981b9;
+    color: white;
+    border-radius: 40px;
+
+}
+
+.content {
+    padding: 25px;
+}
+
+.content > p {
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.skills h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.skill-card {
+    background: #f3f4f6;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.skill-card:hover {
+    background: #e5e7eb;
+    transform: translateY(-2px);
+}
+
+.skill-card p {
+    font-size: 13px;
+    color: #374151;
+    font-weight: 500;
+}
+
+.contacts {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.contacts i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f4f6;
+    border-radius: 8px;
+    color: #6b7280;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contacts i:hover {
+    background: #5eead4;
+    color: white;
 }
 

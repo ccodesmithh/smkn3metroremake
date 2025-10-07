@@ -208,6 +208,7 @@ nav {
 }
 
 .stat-card {
+    position: relative;
     text-align: center;
     padding: 20px;
     background: white;
@@ -305,6 +306,7 @@ nav {
 }
 
 .about-name {
+    position: relative;
     z-index: 999999;
     width: 100%;
     background: rgba(255, 255, 255, 0.442);
@@ -404,6 +406,7 @@ nav {
 }
 
 .program-card {
+    position: relative;
     background: white;
     border-radius: 10px;
     padding: 2rem;

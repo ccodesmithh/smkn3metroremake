@@ -1,13 +1,421 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Labs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .team {
+            width: 100%;
+            max-width: 1400px;
+        }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Header Profile Section */
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 30px 25px 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .team-image-profile {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #5eead4;
+            flex-shrink: 0;
+            position: relative;
+            background: white;
+        }
+
+        .team-image-profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Status Badge */
+        .team-image-profile::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            width: 18px;
+            height: 18px;
+            background: #10b981;
+            border: 3px solid white;
+            border-radius: 50%;
+        }
+
+        .details {
+            flex: 1;
+        }
+
+        .team-name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+        .team-name h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .team-duration {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #6b7280;
+            font-size: 13px;
+            margin-left: auto;
+        }
+
+        .team-duration i {
+            font-size: 12px;
+        }
+
+        .team-role {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+
+        .team-cat {
+            display: inline-block;
+            color: #4b5563;
+            font-size: 12px;
+            background-color: #e5e7eb;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        /* Navigation Tabs */
+        .team-buttons {
+            display: flex;
+            gap: 0;
+            padding: 0 25px;
+            margin-top: 20px;
+            border-bottom: 2px solid #f3f4f6;
+        }
+
+        .team-buttons a {
+            flex: 1;
+            text-align: center;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: #6b7280;
+            font-size: 14px;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .team-buttons a.active {
+            color: #10b981;
+        }
+
+        .team-buttons a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #10b981;
+            border-radius: 2px 2px 0 0;
+        }
+
+        .team-buttons a:hover {
+            color: #059669;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 25px;
+        }
+
+        .content > p {
+            color: #4b5563;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .skills h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .skills-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .skill-card {
+            background: #f3f4f6;
+            padding: 6px 14px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .skill-card:hover {
+            background: #e5e7eb;
+            transform: translateY(-2px);
+        }
+
+        .skill-card p {
+            font-size: 13px;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        /* Contacts */
+        .contacts {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .contacts i {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f3f4f6;
+            border-radius: 8px;
+            color: #6b7280;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contacts i:hover {
+            background: #5eead4;
+            color: white;
+        }
+
+        /* Button */
+        .btn-primary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #5eead4 0%, #10b981 100%);
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-primary a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .btn-primary i {
+            font-size: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .team-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-buttons a {
+                font-size: 13px;
+                padding: 10px 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <section class="team">
+        <div class="team-container">
+            <!-- Card 1 -->
+            <div class="team-card">
+                <div class="profile">
+                    <div class="team-image-profile">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop" alt="Sarah Wijaya">
+                    </div>
+                    <div class="details">
+                        <div class="team-name">
+                            <h3>Sarah Wijaya</h3>
+                            <div class="team-duration">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>8 tahun</span>
+                            </div>
+                        </div>
+                        <div class="team-role">
+                            <p>Project Manager</p>
+                        </div>
+                        <div class="team-cat">
+                            <p>Management</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-buttons">
+                    <a href="#" class="active">Overview</a>
+                    <a href="#">Tugas</a>
+                    <a href="#">Pencapaian</a>
+                </div>
+                
+                <div class="content">
+                    <p>Berpengalaman dalam mengelola proyek kompleks dengan metodologi Agile dan Scrum.</p>
+                    
+                    <div class="skills">
+                        <h4>SKILLS</h4>
+                        <div class="skills-content">
+                            <div class="skill-card">
+                                <p>Project Management</p>
+                            </div>
+                            <div class="skill-card">
+                                <p>Agile</p>
+                            </div>
+                            <div class="skill-card">
+                                <p>Scrum</p>
+                            </div>
+                            <div class="skill-card">
+                                <p>Leadership</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contacts">
+                        <i class="fa-regular fa-envelope"></i>
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    
+                    <div class="btn-primary">
+                        <a href="#">Lihat Detail Profil</a>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
 
-    <script src="labs.js"></script>
+            <!-- Card 2 -->
+            <div class="team-card">
+                <div class="profile">
+                    <div class="team-image-profile">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop" alt="Arafi Mahardika">
+                    </div>
+                    <div class="details">
+                        <div class="team-name">
+                            <h3>Arafi Mahardika</h3>
+                            <div class="team-duration">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>5 tahun</span>
+                            </div>
+                        </div>
+                        <div class="team-role">
+                            <p>Animation Designer</p>
+                        </div>
+                        <div class="team-cat">
+                            <p>Engineering</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-buttons">
+                    <a href="#" class="active">Overview</a>
+                    <a href="#">Tugas</a>
+                    <a href="#">Pencapaian</a>
+                </div>
+                
+                <div class="content">
+                    <p>Spesialis dalam menciptakan animasi interaktif dan pengalaman visual yang menarik.</p>
+                    
+                    <div class="skills">
+                        <h4>SKILLS</h4>
+                        <div class="skills-content">
+                            <div class="skill-card">
+                                <p>HTML</p>
+                            </div>
+                            <div class="skill-card">
+                                <p>CSS</p>
+                            </div>
+                            <div class="skill-card">
+                                <p>JavaScript</p>
+                            </div>
+                            <div class="skill-card">
+                                <p>After Effects</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contacts">
+                        <i class="fa-regular fa-envelope"></i>
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    
+                    <div class="btn-primary">
+                        <a href="#">Lihat Detail Profil</a>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
