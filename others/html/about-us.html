@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="../css/about-us.css">
     <link href="https://cdn.bootcdn.net/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
-     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
         @layer utilities {
             .perspective-1000 {
@@ -20,6 +20,17 @@
                 backface-visibility: hidden;
             }
         }
+         @layer base {
+                h1 {
+                @apply text-4xl font-bold;
+                }
+                h2 {
+                @apply text-3xl font-semibold;
+                }
+                h3 {
+                @apply text-2xl font-medium;
+                }
+            }
     </style>
 <style>
    @keyframes fadeIn {
@@ -157,10 +168,10 @@
                     <p data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="0"> Tentang Kami</p>
                 </div>
                 <div class="header">
-                    <h1>Kenali lebih lanjut tentang kami!</h1>
-                    <h1 class="highlight">Ya, Team</h1>
+                    <h1 data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="50">Kenali lebih lanjut tentang kami!</h1>
+                    <h1 class="highlight" data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="100">Ya, Team</h1>
                 </div>
-                <div class="content">
+                <div class="content" data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="150">
                     <p>Kami dibentuk pada tanggal 1 Oktober 2025 dengan tujuan menyelesaikan tugas <br> yang diberikan oleh guru pembimbing kami, Renan Nazar Brilliant. <br> Dengan selalu mengusahakan yang terbaik untuk menyeleasaikan tugas yang diberikan. <br> Silahkan lihat info lebih lanjut tentang anggota kami!</p>
                 </div>
                 <div class="buttons">
@@ -262,7 +273,7 @@
     </section>
 
     <section class="team">
-            <div class="team-header">
+            <div class="team-header" data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="0">
                 <h1>Kenali anggota <span class="highlight">Ya, Team</span> sekelompok pemuda pemberani.</h1>
                 <p>Kami adalah team kecil yang mengutamakan kualitas dan kejujuran. <br>
                 Kami memegang teguh prinsip bahwa "teknologi mempermudah manusia, bukan sebaliknya."</p>
@@ -485,7 +496,7 @@
 
     <section class="value">
         <div class="value-container">
-            <div class="header">
+            <div class="header" data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="0">
                 <h1>Nilai-Nilai Kami</h1>
                 <p>Kami memegang prinsip teguh yang membantu kami dalam menyelesaikan setiap proyek</p>
             </div>
