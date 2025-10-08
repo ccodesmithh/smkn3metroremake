@@ -6,6 +6,74 @@
     <title>About Us</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="../css/about-us.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+     <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .perspective-1000 {
+                perspective: 1000px;
+            }
+            .transform-style-preserve-3d {
+                transform-style: preserve-3d;
+            }
+            .backface-hidden {
+                backface-visibility: hidden;
+            }
+        }
+    </style>
+<style>
+   @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+   @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity:0; }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+        @keyframes slideOut {
+          from { transform: translateX(0); }
+            to { transform: translateX(100%); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .animate-slide-in {
+            animation: slideIn 0.5s ease-out forwards;
+        }
+        .animate-fade-Out {
+            animation: fadeOut 0.5s ease-out forwards;
+        }
+        .animate-slide-Out {
+            animation: slideOut 0.5s ease-out forwards;
+        }
+        .menu-item-hover {
+            position: relative;
+            overflow: hidden;
+        }
+        .menu-item-hover::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: currentColor;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease-out;
+        }
+        .menu-item-hover:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        .lope:active{
+            transform: scale(1.3)  !important;
+        }
+</style>
 </head>
 <body>
     <header>
@@ -17,37 +85,91 @@
                     <p>Yudha Ganteng</p>
                 </div>
             </div>
-            <ul class="nav-links">
-                <li data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="100"><a href="/index.html">Beranda</a></li>
-                <li data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="200"><a href="#" class="active">Tentang Kami</a></li>
-                <li data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="300"><a href="#">Profil</a></li>
-                <li data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="400"><a href="#">Jurusan</a></li>
-                <li data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="500"><a href="#">Prestasi</a></li>
-                <li data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="600"><a href="#">Galeri</a></li>
-                <li data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="700"><a href="#">Kontak</a></li>
-            </ul>
+            <button id="openSidebar" data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="100" class="text-black hover:text-gray-600 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </nav>
     </header>
+    <aside id="sidebar" class="bg-white dark:bg-gray-800 w-full md:w-64 flex flex-col transition-all fixed right-0 z-[100] ease-in-out hidden transform translate-x-full">
+        <div class="p-4 flex justify-between items-center border-b border-gray-200 dark:border-gray-700">
+            <h1 class="text-2xl font-bold text-indigo-800 dark:text-white">Dashboard</h1>
+            <button id="closeSidebar" class="text-gray-500 hover:text-indigo-800 dark:text-gray-400 dark:hover:text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            
+        </div>
+        <nav class="flex-1 overflow-y-auto w-full">
+            <ul class="p-4 space-y-2 md:w-64 w-full">
+                <li class="animate-fade-in " style="animation-delay: 0.1s;">
+                    <a href="../../index.html" class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                        Home
+                    </a>
+                </li>
+                <li class="animate-fade-in" style="animation-delay: 0.2s;">
+                    <a href="others/html/about-us.html" class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                        About us
+                    </a>
+                </li>
+                <li class="animate-fade-in" style="animation-delay: 0.3s;">
+                    <a href="#" class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        Messages
+                    </a>
+                </li>
+                <li class="animate-fade-in" style="animation-delay: 0.4s;">
+                    <a href="#"  class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        Ubah data
+                    </a>
+                </li>
+                <li class="animate-fade-in" style="animation-delay: 0.4s;">
+                    <a href="#" class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        logout
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
                 <div class="title">
-                    <p>Tentang Kami</p>
+                    <p data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="0"> Tentang Kami</p>
                 </div>
                 <div class="header">
-                    <h1>Lorem Ipsum Dolor</h1>
-                    <h1 class="highlight">Sit Amet</h1>
+                    <h1 data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="100">Lorem Ipsum Dolor</h1>
+                    <h1 class="highlight" data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="150">Sit Amet</h1>
                 </div>
-                <div class="content">
+                <div class="content" data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="200">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum explicabo labore consequuntur, cum hic soluta ratione reiciendis. Veritatis, veniam minima tempora officiis aspernatur autem, nesciunt sapiente esse, at non repudiandae!</p>
                 </div>
                 <div class="buttons">
                     <div class="btn-center">
-                        <div class="btn-primary">
+                        <div class="btn-primary" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1200" data-aos-delay="250">
                             <a href="#">Kenali Tim Kami</a>
                             <i class="fa-solid fa-arrow-right" style="color: white;"></i>
                         </div>
-                        <div class="btn-outline">
+                        <div class="btn-outline" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1200" data-aos-delay="300">
                             <a href="#" class="">Lihat Portfolio</a>
                             <i class="fa-solid fa-arrow-up-right-from-square" style="color: #666;"></i>
                         </div>
@@ -88,7 +210,7 @@
 
     <section class="info">
         <div class="info-container">
-                <div class="info-card">
+                <div class="info-card" data-aos="fade-up" data-aos-delay="0" data-aos-once="true" data-aos-duration="1000">
                     <div class="info-icon">
                         <i class="fa-solid fa-users"></i>
                     </div>
@@ -100,7 +222,7 @@
                         <p>Tim Ahli</p>
                     </div>
                 </div>
-                <div class="info-card">
+                <div class="info-card" data-aos="fade-up" data-aos-delay="100" data-aos-once="true" data-aos-duration="1000">
                     <div class="info-icon">
                         <i class="fa-solid fa-bullseye"></i>
                     </div>
@@ -112,7 +234,7 @@
                         <p>Proyek Selesai (Amin)</p>
                     </div>
                 </div>
-                <div class="info-card">
+                <div class="info-card" data-aos="fade-up" data-aos-delay="200" data-aos-once="true" data-aos-duration="1000">
                     <div class="info-icon">
                         <i class="fa-solid fa-medal"></i>
                     </div>
@@ -124,7 +246,7 @@
                         <p>Tahun Pengalaman</p>
                     </div>
                 </div>
-                <div class="info-card">
+                <div class="info-card" data-aos="fade-up" data-aos-delay="300" data-aos-once="true" data-aos-duration="1000">
                     <div class="info-icon">
                         <i class="fa-solid fa-lightbulb"></i>
                     </div>
@@ -140,12 +262,12 @@
     </section>
 
     <section class="team">
-            <div class="team-header">
+            <div class="team-header" data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="0">
                 <h1>Lorem ipsum dolor sit.</h1>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias quam quas architecto eveniet distinctio atque.</p>
             </div>
         <div class="team-container">
-            <div class="team-card">
+            <div class="team-card" data-aos="fade-up" data-aos-once="true" data-aos-duration="1200" data-aos-delay="0">
                 <div class="profile">
                     <div class="team-image-profile">
                         <img src="/images/HFDYDAPR.png" alt="">
@@ -198,7 +320,7 @@
                     </div>
                 </div>
             </div>
-            <div class="team-card">
+            <div class="team-card" data-aos="fade-up" data-aos-once="true" data-aos-duration="1200" data-aos-delay="100">
                 <div class="profile">
                     <div class="team-image-profile">
                         <img src="/images/HFDYDAPR.png" alt="">
@@ -251,7 +373,7 @@
                     </div>
                 </div>
             </div>
-            <div class="team-card">
+            <div class="team-card" data-aos="fade-up" data-aos-once="true" data-aos-duration="1200" data-aos-delay="200">
                 <div class="profile">
                     <div class="team-image-profile">
                         <img src="/images/HFDYDAPR.png" alt="">
@@ -304,7 +426,7 @@
                     </div>
                 </div>
             </div>
-            <div class="team-card">
+            <div class="team-card" data-aos="fade-up" data-aos-once="true" data-aos-duration="1200" data-aos-delay="300">
                 <div class="profile">
                     <div class="team-image-profile">
                         <img src="/images/HFDYDAPR.png" alt="">
@@ -362,24 +484,24 @@
 
     <section class="value">
         <div class="value-container">
-            <div class="header">
-                <h1>Nilai-Nilai Kami</h1>
+            <div class="header" data-aos="fade-down" data-aos-once="true" data-aos-duration="1200" data-aos-delay="0">
+                <h1>Nilai-Nilai Kami</h1>\
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, laudantium.</p>
             </div>
             <div class="contents">
-                <div class="content">
+                <div class="content" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1200" data-aos-delay="0">
                     <i class="fa-solid fa-heart"></i>
                     <p>Lorem</p>
                 </div>
-                <div class="content">
+                <div class="content" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1200" data-aos-delay="100">
                     <i class="fa-solid fa-heart"></i>
                     <p>Lorem</p>
                 </div>
-                <div class="content">
+                <div class="content" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1200" data-aos-delay="200">
                     <i class="fa-solid fa-heart"></i>
                     <p>Lorem</p>
                 </div>
-                <div class="content">
+                <div class="content" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1200" data-aos-delay="300">
                     <i class="fa-solid fa-heart"></i>
                     <p>Lorem</p>
                 </div>
@@ -427,5 +549,52 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+        const sidebar = document.getElementById('sidebar');
+        const openSidebarBtn = document.getElementById('openSidebar');
+        const closeSidebarBtn = document.getElementById('closeSidebar');
+
+        function openSidebar() {
+            sidebar.style.display = "block"
+            openSidebarBtn.style.color = "gray"
+            setTimeout(() => {
+              sidebar.classList.add('animate-slide-in');
+            }, 200);
+        }
+
+        function closeSidebar() {
+            sidebar.classList.add('animate-slide-Out');
+            sidebar.classList.remove('animate-slide-in');
+            setTimeout(() => {
+              openSidebarBtn.style.color = "black"
+              sidebar.style.display = "none"
+              sidebar.classList.remove('animate-slide-Out');
+
+            }, 1000);
+        }
+
+        openSidebarBtn.addEventListener('click', openSidebar);
+        closeSidebarBtn.addEventListener('click', closeSidebar);
+
+        // Toggle dark mode based on system preference
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+
+        // Add hover effect to menu items
+        const menuItems = document.querySelectorAll('.menu-item-hover');
+        menuItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.querySelector('svg').classList.add('text-indigo-800', 'dark:text-white');
+            });
+            item.addEventListener('mouseleave', () => {
+                item.querySelector('svg').classList.remove('text-indigo-800', 'dark:text-white');
+            });
+        });
+      
+</script>
 </body>
 </html>

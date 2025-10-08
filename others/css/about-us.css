@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
@@ -244,6 +247,8 @@ nav {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
+
+
 
 .info-card {
     text-align: center;
@@ -601,4 +606,42 @@ footer .container {
 
 .operational h4 {
     margin-bottom: 1rem;
+}
+
+
+@media (max-width: 968px) {
+
+    .info-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+}
+
+@media (max-width: 640px) {
+    .info-container {
+        grid-template-columns: 1fr;
+    }
+    .contents .content{
+       padding:0;
+    }
+    .value .value-container .contents {
+        text-align: center;
+        display: grid;
+        gap: 0;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .team-container {
+        display: grid;
+        grid-template-columns:  1fr;
+        gap: 2rem;
+    }
+    .stats-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns:  1fr;
+        gap: 2rem;
+    }
+
+
 }
