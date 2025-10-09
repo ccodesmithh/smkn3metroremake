@@ -249,3 +249,261 @@ nav {
     gap: 5px;
     margin-bottom: 1rem;
 }
+
+@media (max-width: 767px) {
+    nav {
+        padding: 1rem 2%;
+    }
+
+    .logo-text h3 {
+        font-size: 12px;
+    }
+
+    .logo-text p {
+        font-size: 10px;
+    }
+
+    .hero-content .title p {
+        margin-top: 2rem;
+        font-size: 10px;
+        padding: 3px 10px;
+    }
+
+    .hero-content .header {
+        font-size: 1.2rem;
+    }
+
+    .hero-content .content {
+        font-size: 12px;
+        padding: 0 1rem;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px;
+    }
+
+    .filtering {
+        padding: 20px 2%;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .filter-container {
+        margin-left: 0;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .filter-card {
+        padding: 5px 10px;
+        font-size: 9px;
+    }
+
+    .content {
+        padding: 20px 2%;
+        margin-top: 3rem;
+    }
+
+    .content-card-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .card-head img {
+        height: 150px;
+    }
+
+    .card-head .year p {
+        left: 10px;
+        top: 10px;
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+
+    .status {
+        bottom: 20px;
+        left: 10px;
+        font-size: 18px;
+        padding: 3px 8px;
+    }
+
+    .card-body {
+        padding: 15px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .filter-container {
+        margin-left: 5rem;
+    }
+
+    .content-card-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .card-head .year p {
+        left: 15rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content-card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-head .year p {
+        left: 20rem;
+    }
+}
+
+/* Footer */
+footer {
+    background: #1a1a2e;
+    color: white;
+    padding: 60px 5% 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-about h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-about p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-column h4 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #00a86b;
+}
+
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.contact-info i {
+    color: #00a86b;
+    margin-top: 3px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    width: 35px;
+    height: 35px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.social-links a:hover {
+    background: #00a86b;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2rem;
+    text-align: center;
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+}
