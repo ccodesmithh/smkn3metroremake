@@ -8,6 +8,8 @@
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdn.bootcdn.net/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
 
 </head>
     <style type="text/tailwindcss">
@@ -115,7 +117,7 @@
             </button>
         </nav>
     </header>
-    <aside id="sidebar" class="bg-white dark:bg-gray-800 w-full md:w-64 flex flex-col transition-all fixed right-0 z-[100] ease-in-out hidden transform translate-x-full">
+    <aside id="sidebar" class="bg-white shadow-md rounded-sm dark:bg-gray-800 w-full md:w-64 flex flex-col fixed right-0 z-[100] ease-in-out hidden transform translate-x-full">
         <div class="p-4 flex justify-between items-center border-b border-gray-200 dark:border-gray-700">
             <h1 class="text-2xl font-bold text-indigo-800 dark:text-white">Dashboard</h1>
             <button id="closeSidebar" class="text-gray-500 hover:text-indigo-800 dark:text-gray-400 dark:hover:text-white focus:outline-none">
@@ -137,39 +139,26 @@
                     </a>
                 </li>
                 <li class="animate-fade-in" style="animation-delay: 0.2s;">
-                    <a href="others/html/about-us.html" class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
+                    <a href="./about-us.html" class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover">
+                        <i class="fas fa-users" style="margin: 0px 15px 0px 5px;"></i>
                         About us
                     </a>
                 </li>
                 <li class="animate-fade-in" style="animation-delay: 0.3s;">
-                    <a href="#" class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover">
+                    <a href="../../index.html#message" class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                         Messages
                     </a>
                 </li>
-                <li class="animate-fade-in" style="animation-delay: 0.4s;">
-                    <a href="#"  class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        Ubah data
+                <li class="animate-fade-in" style="animation-delay: 0.3s;">
+                    <a href="others/html/hall-of-fame.html" class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover">
+                        <i class="fas fa-trophy" style="margin: 0px 15px 0px 5px;"></i>
+                        Prestasi
                     </a>
                 </li>
-                <li class="animate-fade-in" style="animation-delay: 0.4s;">
-                    <a href="#" class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        logout
-                    </a>
-                </li>
+                
             </ul>
         </nav>
     </aside>
@@ -189,15 +178,15 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, quidem possimus animi sint expedita delectus molestiae voluptas quae, neque sunt ratione a ducimus tenetur exercitationem voluptate minima quos, in similique?</p>
                 </div>
                 <div class="cards-container">
-                    <div class="card">
+                    <div class="card" data-aos="fade-up" data-aos-duration="1100" data-aos-once="true" data-aos-delay="0">
                         <h2 class="highlight">6</h2>
                         <p>Prestasi</p>
                     </div>
-                    <div class="card">
+                    <div class="card" data-aos="fade-up" data-aos-duration="1100" data-aos-once="true" data-aos-delay="100">
                         <h2 class="highlight">9</h2>
                         <p>Jurusan</p>
                     </div>
-                    <div class="card">
+                    <div class="card" data-aos="fade-up" data-aos-duration="1100" data-aos-once="true" data-aos-delay="200">
                         <h2 class="highlight">2023-2024</h2>
                         <p>Periode</p>
                     </div>
@@ -207,21 +196,29 @@
     </section>
     <section class="filtering">
         <div class="filter-container">
-            <p>Filter :</p>
-            <div class="filter-card"><p>Semua Jurusan</p></div>
-            <div class="filter-card"><p>Rekayasa Perangkat Lunak</p></div>
-            <div class="filter-card"><p>Teknik Instalasi Listrik</p></div>
-            <div class="filter-card"><p>Teknik Komputer Jaringan</p></div>
-            <div class="filter-card"><p>Desain Komunikasi Visual</p></div>
+            <p data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" data-aos-delay="0">Filter :</p>
+            <div class="filter-card" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" data-aos-delay="150" id="btnCtn1"><button>Semua Jurusan</button></div>
+            <div class="filter-card" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" data-aos-delay="300" id="btnCtn2"><button>Rekayasa Perangkat Lunak</button></div>
+            <div class="filter-card" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" data-aos-delay="450" id="btnCtn3"><button>Teknik Instalasi Listrik</button></div>
+            <div class="filter-card" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" data-aos-delay="600" id="btnCtn4"><button>Teknik Komputer Jaringan</button></div>
+            <div class="filter-card" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" data-aos-delay="750" id="btnCtn5"><button>Desain Komunikasi Visual</button></div>
         </div>
     </section>
     <section class="content">
-        <div class="content-card-container">
-            <div class="content-card">
+        <div class="content-card-container" id="RPL">
+            <!-- <div class="disp-">
+                <div class="card" data-aos="fade-up" data-aos-duration="1100" data-aos-once="true" data-aos-delay="200">
+                <h2 class="highlight">RPL</h2>
+            </div>
+            </div> -->
+            <div class="content-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="0" >
                 <div class="card-head">
                     <div class="right">
                         <div class="year">
                             <p>2024</p>
+                        </div>
+                        <div class="jurusan">
+                            <p>RPL</p>
                         </div>
                     </div>
                     <img src="../../images/Lab.jpeg" alt="">
@@ -241,11 +238,14 @@
                     </div>
                 </div>
             </div>
-            <div class="content-card">
+            <div class="content-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="100">
                 <div class="card-head">
                     <div class="right">
                         <div class="year">
                             <p>2024</p>
+                        </div>
+                        <div class="jurusan">
+                            <p>RPL</p>
                         </div>
                     </div>
                     <img src="../../images/Lab.jpeg" alt="">
@@ -265,11 +265,14 @@
                     </div>
                 </div>
             </div>
-            <div class="content-card">
+            <div class="content-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="200">
                 <div class="card-head">
                     <div class="right">
                         <div class="year">
                             <p>2024</p>
+                        </div>
+                        <div class="jurusan">
+                            <p>RPL</p>
                         </div>
                     </div>
                     <img src="../../images/Lab.jpeg" alt="">
@@ -289,11 +292,14 @@
                     </div>
                 </div>
             </div>
-            <div class="content-card">
+            <div class="content-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="0">
                 <div class="card-head">
                     <div class="right">
                         <div class="year">
                             <p>2024</p>
+                        </div>
+                        <div class="jurusan">
+                            <p>RPL</p>
                         </div>
                     </div>
                     <img src="../../images/Lab.jpeg" alt="">
@@ -313,16 +319,19 @@
                     </div>
                 </div>
             </div>
-            <div class="content-card">
+            <div class="content-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="100">
                 <div class="card-head">
                     <div class="right">
                         <div class="year">
                             <p>2024</p>
                         </div>
+                        <div class="jurusan">
+                            <p>RPL</p>
+                        </div>
                     </div>
                     <img src="../../images/Lab.jpeg" alt="">
                     <div class="status">
-                        <i class='bx  bx-trophy'  ></i> 
+                        <i class='bx  bx-trophy ' ></i> 
                     </div>
                 </div>
                 <div class="card-body">
@@ -337,11 +346,14 @@
                     </div>
                 </div>
             </div>
-            <div class="content-card">
+            <div class="content-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="200">
                 <div class="card-head">
                     <div class="right">
                         <div class="year">
                             <p>2024</p>
+                        </div>
+                        <div class="jurusan">
+                            <p>RPL</p>
                         </div>
                     </div>
                     <img src="../../images/Lab.jpeg" alt="">
@@ -362,6 +374,256 @@
                 </div>
             </div>
         </div>
+        <div class="content-card-container hidden " id="TKL">
+            <div class="content-card " data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="0" >
+                <div class="card-head">
+                    <div class="right">
+                        <div class="year">
+                            <p>2024</p>
+                        </div>
+                        <div class="jurusan">
+                            <p>TKL</p>
+                        </div>
+                    </div>
+                    <img src="../../images/Lab.jpeg" alt="">
+                    <div class="status">
+                        <i class='bx  bx-trophy'  ></i> 
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="highlight">
+                        <p style="font-size: 12px;">Rekayasa Perangkat Lunak</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ad autem non ipsa provident iusto expedita accusantium maiores nisi. Rem autem voluptatum assumenda quam expedita neque voluptate nisi repellendus similique!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="100">
+                <div class="card-head">
+                    <div class="right">
+                        <div class="year">
+                            <p>2024</p>
+                        </div>
+                        <div class="jurusan">
+                            <p>TKL</p>
+                        </div>
+                    </div>
+                    <img src="../../images/Lab.jpeg" alt="">
+                    <div class="status">
+                        <i class='bx  bx-trophy'  ></i> 
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="highlight">
+                        <p style="font-size: 12px;">Rekayasa Perangkat Lunak</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ad autem non ipsa provident iusto expedita accusantium maiores nisi. Rem autem voluptatum assumenda quam expedita neque voluptate nisi repellendus similique!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="200">
+                <div class="card-head">
+                    <div class="right">
+                        <div class="year">
+                            <p>2024</p>
+                        </div>
+                        <div class="jurusan">
+                            <p>TKL</p>
+                        </div>
+                    </div>
+                    <img src="../../images/Lab.jpeg" alt="">
+                    <div class="status">
+                        <i class='bx  bx-trophy'  ></i> 
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="highlight">
+                        <p style="font-size: 12px;">Rekayasa Perangkat Lunak</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ad autem non ipsa provident iusto expedita accusantium maiores nisi. Rem autem voluptatum assumenda quam expedita neque voluptate nisi repellendus similique!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-card-container hidden" id="TKJ">
+            <div class="content-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="0" >
+                <div class="card-head">
+                    <div class="right">
+                        <div class="year">
+                            <p>2024</p>
+                        </div>
+                        <div class="jurusan">
+                            <p>TKJ</p>
+                        </div>
+                    </div>
+                    <img src="../../images/Lab.jpeg" alt="">
+                    <div class="status">
+                        <i class='bx  bx-trophy'  ></i> 
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="highlight">
+                        <p style="font-size: 12px;">Rekayasa Perangkat Lunak</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ad autem non ipsa provident iusto expedita accusantium maiores nisi. Rem autem voluptatum assumenda quam expedita neque voluptate nisi repellendus similique!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="0" >
+                <div class="card-head">
+                    <div class="right">
+                        <div class="year">
+                            <p>2024</p>
+                        </div>
+                        <div class="jurusan">
+                            <p>TKJ</p>
+                        </div>
+                    </div>
+                    <img src="../../images/Lab.jpeg" alt="">
+                    <div class="status">
+                        <i class='bx  bx-trophy'  ></i> 
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="highlight">
+                        <p style="font-size: 12px;">Rekayasa Perangkat Lunak</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ad autem non ipsa provident iusto expedita accusantium maiores nisi. Rem autem voluptatum assumenda quam expedita neque voluptate nisi repellendus similique!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="100">
+                <div class="card-head">
+                    <div class="right">
+                        <div class="year">
+                            <p>2024</p>
+                        </div>
+                        <div class="jurusan">
+                            <p>TKJ</p>
+                        </div>
+                    </div>
+                    <img src="../../images/Lab.jpeg" alt="">
+                    <div class="status">
+                        <i class='bx  bx-trophy'  ></i> 
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="highlight">
+                        <p style="font-size: 12px;">Rekayasa Perangkat Lunak</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ad autem non ipsa provident iusto expedita accusantium maiores nisi. Rem autem voluptatum assumenda quam expedita neque voluptate nisi repellendus similique!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-card-container hidden " id="DKV">
+            <div class="content-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="0" >
+                <div class="card-head">
+                    <div class="right">
+                        <div class="year">
+                            <p>2024</p>
+                        </div>
+                        <div class="jurusan">
+                            <p>DKV</p>
+                        </div>
+                    </div>
+                    <img src="../../images/Lab.jpeg" alt="">
+                    <div class="status">
+                        <i class='bx  bx-trophy'  ></i> 
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="highlight">
+                        <p style="font-size: 12px;">Rekayasa Perangkat Lunak</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ad autem non ipsa provident iusto expedita accusantium maiores nisi. Rem autem voluptatum assumenda quam expedita neque voluptate nisi repellendus similique!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="100">
+                <div class="card-head">
+                    <div class="right">
+                        <div class="year">
+                            <p>2024</p>
+                        </div>
+                        <div class="jurusan">
+                             <p>DKV</p><!-- perlu diganti -->
+                        </div>
+                    </div>
+                    <img src="../../images/Lab.jpeg" alt=""> <!-- Ini perlu diganti  -->
+                    <div class="status">
+                        <i class='bx  bx-trophy'  ></i> 
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="highlight">
+                        <p style="font-size: 12px;">Rekayasa Perangkat Lunak</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ad autem non ipsa provident iusto expedita accusantium maiores nisi. Rem autem voluptatum assumenda quam expedita neque voluptate nisi repellendus similique!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="200">
+                <div class="card-head">
+                    <div class="right">
+                        <div class="year">
+                            <p>2024</p>
+                        </div>
+                        <div class="jurusan">
+                            <p>DKV</p>
+                        </div>
+                    </div>
+                    <img src="../../images/Lab.jpeg" alt="">
+                    <div class="status">
+                        <i class='bx  bx-trophy'  ></i> 
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="highlight">
+                        <p style="font-size: 12px;">Rekayasa Perangkat Lunak</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ad autem non ipsa provident iusto expedita accusantium maiores nisi. Rem autem voluptatum assumenda quam expedita neque voluptate nisi repellendus similique!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </section>
     <footer>
         <div class="footer-container">
@@ -389,13 +651,21 @@
 
             <div class="footer-column">
                 <h4>Program Keahlian</h4>
-                <ul>
+                <div class="flex">
+                    <ul class="me-10">
                     <li><a href="#">RPL</a></li>
                     <li><a href="#">DKV</a></li>
                     <li><a href="#">TKJ</a></li>
                     <li><a href="#">TM</a></li>
                     <li><a href="#">TKL</a></li>
                 </ul>
+                <ul>
+                    <li><a href="#">TKP</a></li>
+                    <li><a href="#">TB</a></li>
+                    <li><a href="#">DPIB</a></li>
+                    <li><a href="#">TKKR</a></li>
+                </ul>
+                </div>
             </div>
 
             <div class="footer-column">
@@ -421,5 +691,55 @@
             <p>© 2025 SMK Negeri 3 Metro. All rights reserved.</p>
         </div>
     </footer>
+    <script src="https://cdn.bootcdn.net/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="main.js"></script>
+    <script>
+        AOS.init();
+        const sidebar = document.getElementById('sidebar');
+        const openSidebarBtn = document.getElementById('openSidebar');
+        const closeSidebarBtn = document.getElementById('closeSidebar');
+
+        function openSidebar() {
+            sidebar.style.display = "block"
+            openSidebarBtn.style.color = "gray"
+            setTimeout(() => {
+              sidebar.classList.add('animate-slide-in');
+            }, 200);
+        }
+
+        function closeSidebar() {
+            sidebar.classList.add('animate-slide-Out');
+            sidebar.classList.remove('animate-slide-in');
+            setTimeout(() => {
+              openSidebarBtn.style.color = "black"
+              sidebar.style.display = "none"
+              sidebar.classList.remove('animate-slide-Out');
+
+            }, 1000);
+        }
+
+        openSidebarBtn.addEventListener('click', openSidebar);
+        closeSidebarBtn.addEventListener('click', closeSidebar);
+
+        // Toggle dark mode based on system preference
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+
+        // Add hover effect to menu items
+        const menuItems = document.querySelectorAll('.menu-item-hover');
+        menuItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.querySelector('svg').classList.add('text-indigo-800', 'dark:text-white');
+            });
+            item.addEventListener('mouseleave', () => {
+                item.querySelector('svg').classList.remove('text-indigo-800', 'dark:text-white');
+            });
+        });
+      
+
+
+    </script>
+    <script src="../js/hall.js"></script>
 </body>
 </html>

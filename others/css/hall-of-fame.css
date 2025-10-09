@@ -31,6 +31,10 @@ nav {
     max-width: 1400px;
     margin: 0 auto;
 }
+.card-head .status:hover{
+    transform: scale(1.03);
+    color: gold;
+}
 
 .logo {
     display: flex;
@@ -176,6 +180,7 @@ nav {
     border: 1px solid #666;
     padding: 3px 15px 3px 15px;
     text-align: center;
+    transition: all 1s ease !important;
     width: auto;
 }
 
@@ -191,11 +196,24 @@ nav {
 .content-card-container {
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
-
+/* .content-card-container .disp-{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+.content-card-container .disp- .card{
+    z-index: 322232;
+    position: absolute;
+    top: -3rem;
+} */
 .card-head img {
     width: 100%;
     height: 200px;
@@ -215,7 +233,7 @@ nav {
     text-align: center;
 }
 
-.card-head .year p {
+.card-head .year {
     position: absolute;
     top: 10px;
     left: 20rem;
@@ -226,13 +244,29 @@ nav {
     font-size: 12px;
     font-weight: bold;
 }
-
+.card-head .jurusan {
+    position: absolute;
+    top: 10px;
+    right: 20.5rem;
+    background-color: #fff;
+    color: #00a86b;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.filter-card:hover{
+    background-color: #00a86b;
+    color: #fff;
+}
 .status {
     position: absolute;
     bottom: 30px;
     left: 10px;
+    transition: 0.5s;
     background-color: #00a86b;
     color: #fff;
+    cursor: pointer;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 22px;
@@ -309,6 +343,11 @@ nav {
     .filter-card {
         padding: 5px 10px;
         font-size: 9px;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    .filter-card button:hover{
+        background-color: #000000;
     }
 
     .content {
@@ -375,6 +414,7 @@ footer {
     background: #1a1a2e;
     color: white;
     padding: 60px 5% 20px;
+    margin-top: 5rem;
 }
 
 .footer-container {
@@ -469,6 +509,20 @@ footer {
     text-align: center;
     color: #ccc;
     font-size: 14px;
+}
+
+.active{
+    transition: 0.5s;
+    animation: active 1s forwards;
+}
+@keyframes active{
+    0%{
+        transform: scale(0.8);
+        opacity: 0;
+    }100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* Responsive Design */
