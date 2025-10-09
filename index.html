@@ -20,6 +20,17 @@
                 backface-visibility: hidden;
             }
         }
+        @layer base {
+                h1 {
+                @apply text-4xl font-bold;
+                }
+                h2 {
+                @apply text-3xl font-semibold;
+                }
+                h3 {
+                @apply text-2xl font-medium;
+                }
+            }
     </style>
 <style>
    @keyframes fadeIn {
@@ -509,78 +520,110 @@
             <h2 data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">Program Keahlian</h2>
             <p data-aos="fade-up" data-aos-duration="600" data-aos-once="true">Program Keahlian Unggulan kami adalah sebagai berikut:</p>
         </div>
-        <div class="programs-grid">
-            <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="0">
-                <div class="program-icon">RPL</div>
-                <h3>Rekayasa Perangkat Lunak dan Gim</h3>
-                <p>Program yang berfokus pada pengembangan aplikasi, website, dan game yang sesuai kemajuan teknologi.</p>
-                <a href="#" class="program-link">
-                    Pelajari Lebih Lanjut
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <div class="shimmer"></div>
-            </div>
+        <div class="con-prog parent-grid p-4 max-h-[270px] overflow-hidden" style="transition: 1s ease-in-out;">
+            <div class="programs-grid">
+                <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="0">
+                    <div class="program-icon">RPL</div>
+                    <h3>Rekayasa Perangkat Lunak dan Gim</h3>
+                    <p>Program yang berfokus pada pengembangan aplikasi, website, dan game yang sesuai kemajuan teknologi.</p>
+                    <a href="#" class="program-link">
+                        Pelajari Lebih Lanjut
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="shimmer"></div>
+                </div>
 
-            <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="100">
-                <div class="program-icon">DKV</div>
-                <h3>Desain Komunikasi Visual</h3>
-                <p>Program yang berfokus di bidang desain grafis, multimedia, fotografi, dan animasi.</p>
-                <a href="#" class="program-link">
-                    Pelajari Lebih Lanjut
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <div class="shimmer"></div>
-            </div>
+                <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="100">
+                    <div class="program-icon">DKV</div>
+                    <h3>Desain Komunikasi Visual</h3>
+                    <p>Program yang berfokus di bidang desain grafis, multimedia, fotografi, dan animasi.</p>
+                    <a href="#" class="program-link">
+                        Pelajari Lebih Lanjut
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="shimmer"></div>
+                </div>
 
-            <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="200">
-                <div class="program-icon">TKJ</div>
-                <h3>Teknik Jaringan Komputer</h3>
-                <p>Program yang membekali siswa dengan keterampilan merancang, membangun, dan mengelola jaringan komputer.</p>
-                <a href="#" class="program-link">
-                    Pelajari Lebih Lanjut
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <div class="shimmer"></div>
-            </div>
+                <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="200">
+                    <div class="program-icon">TKJ</div>
+                    <h3>Teknik Jaringan Komputer</h3>
+                    <p>Program yang membekali siswa dengan keterampilan merancang, membangun, dan mengelola jaringan komputer.</p>
+                    <a href="#" class="program-link">
+                        Pelajari Lebih Lanjut
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="shimmer"></div>
+                </div>
 
-            <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="0">
-                <div class="program-icon">TM</div>
-                <h3>Teknik Mesin</h3>
-                <p>Program yang mengajarkan keterampilan permesinan berat, pembuatan produk, dan perawatan alat berat.</p>
-                <a href="#" class="program-link">
-                    Pelajari Lebih Lanjut
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <div class="shimmer"></div>
-            </div>
+                <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="0">
+                    <div class="program-icon">TM</div>
+                    <h3>Teknik Mesin</h3>
+                    <p>Program yang mengajarkan keterampilan permesinan berat, pembuatan produk, dan perawatan alat berat.</p>
+                    <a href="#" class="program-link">
+                        Pelajari Lebih Lanjut
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="shimmer"></div>
+                </div>
 
-            <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="100">
-                <div class="program-icon">TKL</div>
-                <h3>Teknik Ketenagaan Listrik</h3>
-                <p>Program yang berfokus pada instalasi listrik, tenaga listrik, dan perawatan peralatan listrik.</p>
-                <a href="#" class="program-link">
-                    Pelajari Lebih Lanjut
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <div class="shimmer"></div>
-            </div>
+                <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="100">
+                    <div class="program-icon">TKL</div>
+                    <h3>Teknik Ketenagaan Listrik</h3>
+                    <p>Program yang berfokus pada instalasi listrik, tenaga listrik, dan perawatan peralatan listrik.</p>
+                    <a href="#" class="program-link">
+                        Pelajari Lebih Lanjut
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="shimmer"></div>
+                </div>
 
-            <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="200">
-                <div class="program-icon">TKP</div>
-                <h3>Teknik Konstruksi Pembangunan</h3>
-                <p>Program yang mempelajari seluruh aspek pembangunan, perencanaan awal, dan keselamatan kerja.</p>
-                <a href="#" class="program-link">
-                    Pelajari Lebih Lanjut
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <div class="shimmer"></div>
+                <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="200">
+                    <div class="program-icon">TKP</div>
+                    <h3>Teknik Konstruksi Pembangunan</h3>
+                    <p>Program yang mempelajari seluruh aspek pembangunan, perencanaan awal, dan keselamatan kerja.</p>
+                    <a href="#" class="program-link">
+                        Pelajari Lebih Lanjut
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="shimmer"></div>
+                </div>
+                <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="200">
+                    <div class="program-icon">TKP</div>
+                    <h3>TB</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa corrupti inventore quae nobis rem a culpa eius quos accusantium alias, autem voluptas ullam, laboriosam sint?</p>
+                    <a href="#" class="program-link">
+                        Pelajari Lebih Lanjut
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="shimmer"></div>
+                </div>
+                <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="200">
+                    <div class="program-icon">TKP</div>
+                    <h3>DPIB</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, nam iure omnis numquam rem impedit. Corporis temporibus aut praesentium dolorum error, illum aspernatur illo maiores.</p>
+                    <a href="#" class="program-link">
+                        Pelajari Lebih Lanjut
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="shimmer"></div>
+                </div>
+                <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="200">
+                    <div class="program-icon">TKKR</div>
+                    <h3>TKKR</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quis at dicta voluptates amet adipisci libero, aliquam perspiciatis similique sed, magni iusto, reiciendis doloribus quasi?</p>
+                    <a href="#" class="program-link">
+                        Pelajari Lebih Lanjut
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="shimmer"></div>
+                </div>
             </div>
         </div>
         <div class="btn-center">
-            <a href="#" class="btn-primary" data-aos="zoom-in" data-aos-duration="1200" data-aos-once="true">
+            <button id="allJurusan" style="transition: all 1s !important;" class="btn-primary" data-aos="zoom-in" data-aos-duration="1200" data-aos-once="true">
                 Lihat Semua Program
-                <i class="fas fa-arrow-right"></i>
-            </a>
+                <i class="fas fa-chevron-down"></i>
+            <button>
         </div>
     </section>
 
@@ -731,6 +774,21 @@
         shimmer.classList.remove('shimmer')
         Bu_erlian.style.transform = 'Scale(1)'
       })
+
+
+
+      document.getElementById('allJurusan').addEventListener('click', function() {
+        const content = document.querySelector('.con-prog');
+
+        if (content.style.maxHeight === '1200px') {
+            content.style.maxHeight = '270px'; // kembali ke default 
+            document.getElementById('allJurusan').innerHTML = "Lihat Semua Program <i class='fas fa-chevron-down'></i>"
+        } else {
+            content.style.maxHeight = '1200px';
+            document.getElementById('allJurusan').innerHTML = "Lihat Sedikit Program <i class='fas fa-chevron-up'></i>"
+        }
+    });
+
 
     </script>
     <script type="module">
