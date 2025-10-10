@@ -569,7 +569,14 @@
 
     <script src="https://cdn.bootcdn.net/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init();
+        document.querySelectorAll('[data-aos]').forEach(el => {
+        if (window.innerWidth < 690){
+            el.setAttribute('data-aos-anchor-placement','center-bottom')
+            el.removeAttribute('data-aos-anchor')
+            el.removeAttribute('data-aos-delay')
+        }
+    })
+    AOS.init();
         const sidebar = document.getElementById('sidebar');
         const openSidebarBtn = document.getElementById('openSidebar');
         const closeSidebarBtn = document.getElementById('closeSidebar');
