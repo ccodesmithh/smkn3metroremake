@@ -232,11 +232,16 @@ nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+.content-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.11);
+    transition: 0.4s !important;
+}
 
 .card-head .year {
     position: absolute;
     top: 10px;
-    left: 20rem;
+    right: 0.7rem;
     background-color: #ffffff;
     color: #666;
     padding: 5px 10px;
@@ -247,7 +252,7 @@ nav {
 .card-head .jurusan {
     position: absolute;
     top: 10px;
-    right: 20.5rem;
+    left: 0.7rem;
     background-color: #fff;
     color: #00a86b;
     padding: 5px 10px;

@@ -148,6 +148,7 @@ nav {
 }
 
 .btn-primary:hover {
+    transition: 0.4s !important;
     background: #008856;
 }
 
@@ -171,6 +172,7 @@ nav {
 }
 
 .btn-outline:hover {
+    transition: 0.4s !important;
     background-color: #c2c1c1;
     color: white;
 }
@@ -326,7 +328,8 @@ nav {
 }
 
 .team-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) !important;
+    transition: 0.4s !important;
 }
 
 .profile {
@@ -437,8 +440,8 @@ nav {
     padding: 25px;
 }
 
-.contents .content:hover ~ i{
-    color: red;
+.contents .content:hover{
+    color: red !important;
 }
 
 .content > p {
@@ -467,6 +470,7 @@ nav {
 .skill-card {
     background: #f3f4f6;
     padding: 6px 14px;
+    cursor: pointer;
     border-radius: 6px;
     transition: all 0.2s ease;
 }
@@ -505,7 +509,7 @@ nav {
 }
 
 .contacts i:hover {
-    background: #5eead4;
+    background: #10b981b9;
     color: white;
 }
 

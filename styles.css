@@ -212,8 +212,16 @@ nav {
     text-align: center;
     padding: 20px;
     background: white;
+    cursor: pointer;
+    display: block;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+.stat-card:hover{
+    transform: translateY(-5px) !important;
+    transition-delay: 0s !important;
+    box-shadow:  0 5px 25px rgba(0,0,0,0.15);
+    transition: 0.4s !important;
 }
 
 .stat-icon {
@@ -372,6 +380,7 @@ nav {
 .btn-secondary:hover {
     background: #00a86b;
     color: white;
+    transition: 0.4s !important;
 }
 
 /* Programs Section */
@@ -383,6 +392,7 @@ nav {
 .section-header {
     text-align: center;
     margin-bottom: 3rem;
+    
 }
 
 .section-header h2 {
@@ -409,14 +419,19 @@ nav {
     position: relative;
     background: white;
     border-radius: 10px;
+    max-height: 400px;
+    overflow: hidden;           
+    text-overflow: ellipsis;  
     padding: 2rem;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .program-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transform: translateY(-5px) !important;
+    transition-delay: 0s !important;
+    transition: 0.4s !important;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.15);
 }
 
 .program-icon {
@@ -437,6 +452,10 @@ nav {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     color: #333;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
 }
 
 .program-card p {
@@ -444,6 +463,10 @@ nav {
     font-size: 14px;
     margin-bottom: 1.5rem;
     line-height: 1.6;
+    overflow: hidden;           
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 .program-link {

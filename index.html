@@ -520,7 +520,7 @@
         <div class="con-prog parent-grid p-4 max-h-[500px] overflow-hidden" style="transition: 1s !important;mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0)); -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));">
             <div class="programs-grid">
                 <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="0">
-                    <div class="program-icon">RPL <div class="shimmer"></div></div>
+                    <div class="program-icon relative">RPL <div class="shimmer"></div></div>
                     <h3>Rekayasa Perangkat Lunak dan Gim</h3>
                     <p>Program yang berfokus pada pengembangan aplikasi, website, dan game yang sesuai kemajuan teknologi.</p>
                     <a href="#" class="program-link  mt-auto">
@@ -530,7 +530,7 @@
                 </div>
 
                 <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="100">
-                    <div class="program-icon">DKV <div class="shimmer"></div></div>
+                    <div class="program-icon relative">DKV <div class="shimmer"></div></div>
                     <h3>Desain Komunikasi Visual</h3>
                     <p>Program yang berfokus di bidang desain grafis, multimedia, fotografi, dan animasi.</p>
                     <a href="#" class="program-link mt-auto">
@@ -540,7 +540,7 @@
                 </div>
 
                 <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="200">
-                    <div class="program-icon">TKJ <div class="shimmer"></div></div>
+                    <div class="program-icon relative">TKJ <div class="shimmer"></div></div>
                     <h3>Teknik Jaringan Komputer</h3>
                     <p>Program yang membekali siswa dengan keterampilan merancang, membangun, dan mengelola jaringan komputer.</p>
                     <a href="#" class="program-link">
@@ -590,7 +590,7 @@
                 <div class="program-card" data-aos="fade-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="200">
                     <div class="program-icon">DPIB <div class="shimmer"></div></div>
                     <h3>DPIB</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, nam iure omnis numquam rem impedit. Corporis temporibus aut praesentium dolorum error, illum aspernatur illo maiores.</p>
+                    <p>Lorem ipsum dolor sit lorem amet consectetur adipisicing elit. Placeat, nam iure omnis numquam rem impedit. Corporis temporibus aut praesentium dolorum error, illum aspernatur illo maiores.</p>
                     <a href="#" class="program-link">
                         Pelajari Lebih Lanjut
                         <i class="fas fa-arrow-right"></i>
@@ -756,11 +756,13 @@
       Bu_erlian.addEventListener('mouseover', function(){
           shimmer.classList.add('shimmer')
           Bu_erlian.style.transform = 'Scale(1.01)'
+          Bu_erlian.style.transition = '0.4s !important'
       })
 
       Bu_erlian.addEventListener('mouseout', function(){
         shimmer.classList.remove('shimmer')
         Bu_erlian.style.transform = 'Scale(1)'
+        Bu_erlian.style.transition = 'transform 0.4s ease'
       })
 
 
