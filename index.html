@@ -667,39 +667,26 @@
     // Pasang event listener di form dengan id 'message-form' buat submit
     document.getElementById('message-form').addEventListener('submit', async function(event) {
         event.preventDefault(); // Mencegah reload halaman saat form disubmit
-
         const messageInput = document.getElementById('message-input'); // Ambil input dari user
-        const userMessage = messageInput.value.trim(); // Ambil dan rapikan inputan
+        const userMessage = messageInput.value; // Ambil value inputan
+        if (!userMessage.trim()) return; // Kalo Inputan kosong, hentikan proses
+        const messagesDiv = document.getElementById('messages'); // Ambil elemen untuk nampilin pesan
 
-        if (!userMessage) return; // Kalo input kosong, hentikan
-
-        const messagesDiv = document.getElementById('messages');
-
-        // Tampilkan pesan user
+        // Buat elemen paragraf baru untuk pesan user trus tambahkan ke messagesDiv
         const userP = document.createElement('p');
         userP.innerHTML = `<strong>Ente:</strong> ${userMessage}`;
         messagesDiv.appendChild(userP);
 
-        // Auto scroll
+        // Scroll ke bawah biar pesan terbaru terlihat
         messagesDiv.scrollTop = messagesDiv.scrollHeight;
-        messageInput.value = ''; // Kosongkan input
+        messageInput.value = ''; // Kosongkan input pesan
 
         try {
-            // Kirim ke backend (Vercel)
-            const response = await fetch('https://smkn3metroremake-nymldjkdt-hyroesamv-gmailcoms-projects.vercel.app/api/chat', {
+            // Kirim pesan ke backend (Vercel)
+            const response = await fetch('/api/chat', {
                 method: 'POST',
                 headers: {
-                    'accept': '*/*',
-                    'accept-language': 'en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7',
-                    'content-type': 'application/json',
-                    'priority': 'u=1, i',
-                    'sec-ch-ua': '"Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"',
-                    'sec-ch-ua-mobile': '?1',
-                    'sec-ch-ua-platform': '"Android"',
-                    'sec-fetch-dest': 'empty',
-                    'sec-fetch-mode': 'cors',
-                    'sec-fetch-site': 'cross-site',
-                    'Referer': 'https://ccodesmithh.github.io/'
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ message: userMessage })
             });
@@ -709,19 +696,19 @@
             }
 
             const data = await response.json();
-            const text = data.response || "(Tidak ada respons dari server)";
+            const text = data.response;
 
-            // Tampilkan balasan AI
+            // Buat elemen paragraf baru buat balasan AI terus tambahkan ke messagesDiv
             const aiP = document.createElement('p');
             aiP.innerHTML = `<strong>Masyud:</strong> ${text}`;
             messagesDiv.appendChild(aiP);
 
-            // Auto scroll lagi
+            // Scroll ke bawah agar balasan AI terlihat
             messagesDiv.scrollTop = messagesDiv.scrollHeight;
-
         } catch (error) {
+            // Error Handling
             console.error("Kaga bisa generate wak! Error:", error);
-            messagesDiv.innerHTML += `<p style="color: red;">Ada yang salah dah keknya 😅 Error: ${error.message}</p>`;
+            document.getElementById('messages').innerHTML += `<p style="color: red;">Ada yang salah dah keknya. Error: ${error.message}</p>`;
         }
     });
 
