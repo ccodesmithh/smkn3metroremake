@@ -8,7 +8,7 @@ Petunjuk File:
 
 ## Setup Backend Proxy
 
-Proyek ini menggunakan backend proxy Node.js biiar aman menggunakan Google Generative AI API.
+Proyek ini menggunakan backend proxy Node.js agar aman menggunakan Google Generative AI API.
 
 ### Instalasi Lokal
 
@@ -19,6 +19,6 @@ Install dependencies:
 
 ### Cara Kerja
 
-- Frontend kirinm pesan ke `/api/chat` via POST.
-- Backend membaca `context.txt` menggabungkan dengan pesan user dan memanggil Google Generative AI.
+- Frontend mengirim pesan ke `/api/chat` via POST.
+- Backend membaca `context.txt`, menggabungkan dengan pesan user, dan memanggil Google Generative AI.
 - Response dikirim kembali ke frontend.
