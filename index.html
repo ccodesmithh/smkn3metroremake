@@ -812,8 +812,8 @@
         messageInput.value = ''; // Kosongkan input pesan
 
         try {
-            // Kirim pesan ke backend
-            const response = await fetch('/api/chat', {
+            // Kirim pesan ke backend (Vercel)
+            const response = await fetch('https://smk-negeri-3-metro-remake-pnfsw9lp9.vercel.app/api/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
