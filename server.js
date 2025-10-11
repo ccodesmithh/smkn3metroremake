@@ -9,14 +9,25 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
+const allowedOrigins = ['https://ccodesmithh.github.io'];
+
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://ccodesmithh.github.io');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // Include allowed HTTP methods
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // Include allowed headers
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type');
+
+  // Jika method OPTIONS, hentikan di sini
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200);
+  }
+
   next();
 });
 
-app.use(express.json());
 
 // Inisialisasi Google Generative AI
 let genAI;
