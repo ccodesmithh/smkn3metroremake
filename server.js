@@ -16,18 +16,15 @@ app.use((req, res, next) => {
   if (allowedOrigins.includes(origin)) {
     res.setHeader('Access-Control-Allow-Origin', origin);
   }
-
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type');
 
-  // Jika method OPTIONS, hentikan di sini
   if (req.method === 'OPTIONS') {
     return res.sendStatus(200);
   }
 
   next();
 });
-
 
 // Inisialisasi Google Generative AI
 let genAI;
