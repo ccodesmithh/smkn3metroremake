@@ -683,7 +683,7 @@
 
         try {
             // Kirim pesan ke backend (Vercel)
-            console.log('API_KEY exists:', !!process.env.API_KEY);
+            console.log("API_KEY ada?", !!process.env.API_KEY);
             const response = await fetch('https://smkn3metroremake-nymldjkdt-hyroesamv-gmailcoms-projects.vercel.app/api/chat', {
                 method: 'POST',
                 headers: {
