@@ -9,11 +9,13 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors({
-  origin: 'https://ccodesmithh.github.io',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization']
-}));
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://ccodesmithh.github.io');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // Include allowed HTTP methods
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // Include allowed headers
+  next();
+});
+
 app.use(express.json());
 
 // Inisialisasi Google Generative AI
