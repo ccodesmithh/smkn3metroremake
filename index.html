@@ -664,21 +664,14 @@
 
 
     </script>
-    <script type="module">
-    // Import modul GoogleGenerativeAI
-    import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
-
-    // API key untuk autentikasi ke layanan Google Generative AI
-    const API_KEY = "Rahasia ya...";
-
-
+    <script>
     // Pasang event listener di form dengan id 'message-form' buat submit
     document.getElementById('message-form').addEventListener('submit', async function(event) {
-        event.preventDefault(); // Mencegah reload halamansaat form disubmit
+        event.preventDefault(); // Mencegah reload halaman saat form disubmit
         const messageInput = document.getElementById('message-input'); // Ambil input dari user
         const userMessage = messageInput.value; // Ambil value inputan
-        if (!userMessage.trim()) return; // Kalo Inputan kosong, hentikan prroses
-        const messagesDiv = document.getElementById('messages'); // Ambil elemen untuk namppilin pesan
+        if (!userMessage.trim()) return; // Kalo Inputan kosong, hentikan proses
+        const messagesDiv = document.getElementById('messages'); // Ambil elemen untuk nampilin pesan
 
         // Buat elemen paragraf baru untuk pesan user trus tambahkan ke messagesDiv
         const userP = document.createElement('p');
@@ -690,23 +683,21 @@
         messageInput.value = ''; // Kosongkan input pesan
 
         try {
-            // Baca Context
-            const response = await fetch('context.txt');
+            // Kirim pesan ke backend
+            const response = await fetch('/api/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: userMessage })
+            });
+
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            const data = await response.text();
-            const komplit = data + userMessage;
-            // Inisialisasi GoogleGenerativeAI pake API key
-            const genAI = new GoogleGenerativeAI(API_KEY);
-            // model generatif yang bklan digunakan
-            const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-            // Minta model buat generate konten berdasarkan full konteks user
-            const result = await model.generateContent(komplit);
-            // Ambil response dari hasil generate konten
-            const myresponse = await result.response;
-            // Ambil teks dari response
-            const text = myresponse.text();
+
+            const data = await response.json();
+            const text = data.response;
 
             // Buat elemen paragraf baru buat balasan AI terus tambahkan ke messagesDiv
             const aiP = document.createElement('p');
