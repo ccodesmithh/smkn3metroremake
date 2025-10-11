@@ -26,6 +26,9 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(cors());
+app.use(express.json());
+
 // Inisialisasi Google Generative AI
 let genAI;
 try {
