@@ -9,15 +9,38 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  if (req.method === 'OPTIONS') {
+    res.sendStatus(200);
+  } else {
+    next();
+  }
+});
 app.use(cors());
 app.use(express.json());
 
 // Inisialisasi Google Generative AI
-const genAI = new GoogleGenerativeAI(process.env.API_KEY);
+let genAI;
+try {
+  if (!process.env.API_KEY) {
+    throw new Error('API_KEY not set');
+  }
+  genAI = new GoogleGenerativeAI(process.env.API_KEY);
+} catch (error) {
+  console.error('Error initializing genAI:', error);
+  genAI = null;
+}
 
 // Route untuk chat
 app.post('/api/chat', async (req, res) => {
   try {
+    if (!genAI) {
+      return res.status(500).json({ error: 'API key not configured' });
+    }
+
     const { message } = req.body;
 
     if (!message) {
