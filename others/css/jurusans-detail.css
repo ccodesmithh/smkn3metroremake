@@ -253,3 +253,114 @@ body {
         height: 300px;
     }
 }
+
+@media (max-width: 768px) {
+    .right-container {
+        min-height: 400px;
+    }
+
+    .left-container {
+        padding: 40px 20px;
+    }
+
+    .major-name h1 {
+        font-size: 36px;
+    }
+
+    .description-container {
+        padding: 30px;
+    }
+
+    .detail-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .detail-container .icon {
+        grid-row: auto;
+        width: 40px;
+        height: 40px;
+    }
+
+    .detail-container .icon i {
+        font-size: 20px;
+    }
+
+    .detail-title h4 {
+        font-size: 16px;
+    }
+
+    .detail-detail {
+        font-size: 13px;
+    }
+
+    .right-container {
+        padding: 20px;
+    }
+
+    .circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .student-badge {
+        bottom: 70px;
+        font-size: 14px;
+        padding: 6px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .right-container {
+        min-height: 350px;
+    }
+
+    .left-container {
+        padding: 30px 15px;
+    }
+
+    .major-name h1 {
+        font-size: 28px;
+    }
+
+    .description-container {
+        padding: 20px;
+    }
+
+    .description-text {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .detail-title h4 {
+        font-size: 15px;
+    }
+
+    .detail-detail {
+        font-size: 12px;
+    }
+
+    .btn-primary {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    .btn-primary i {
+        font-size: 18px;
+    }
+
+    .right-container {
+        padding: 15px;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .student-badge {
+        bottom: 60px;
+        font-size: 12px;
+        padding: 5px 15px;
+    }
+}
