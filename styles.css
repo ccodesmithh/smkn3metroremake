@@ -32,6 +32,7 @@
 }
 
 body {
+    overflow: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     line-height: 1.6;
@@ -767,7 +768,7 @@ svg text {
 
 .entry-container{
     background: linear-gradient(135deg, #004d3d, #007a58);
-    opacity: 0.9;
+    opacity: 1;
     transition: 1s;
 }
 

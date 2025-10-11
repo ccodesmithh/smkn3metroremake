@@ -125,7 +125,7 @@
 
     <!-- entry animation -->
 
-    <div class="entry-container w-full h-[100vh] fixed z-[12121212] flex justify-center items-center" >
+    <div class="entry-container w-full h-[100vh] fixed z-[12121212] hidden justify-center items-center" >
         <div class="entry-content ">
             <div class="text">
                 <svg viewBox="0 0 2220 700" style="width: 100%;">
@@ -654,12 +654,30 @@
             el.removeAttribute('data-aos-delay')
         }
     })
-    document.querySelector('.btn-masuk').addEventListener('click',function(){
-        document.querySelector('.entry-container').style.opacity = '0'
-        // Bangke ku kira tombol yang lain kaga jalan kenapa, rupanya koe cuman mainin opacity doang. Kaget aku kenapa tiba-tiba kaga jalan
-        document.querySelector('.entry-container').style.display = 'none'
+    
+    entry = sessionStorage.getItem('entry')
+    const entryContainer = document.querySelector('.entry-container')
+    if(!entry){
+        entryContainer.style.display = 'flex'
+        document.body.style.overflow = ''
+        document.querySelector('.btn-masuk').addEventListener('click',function(){
+            document.querySelector('.entry-container').style.opacity = '0'
+            // Bangke ku kira tombol yang lain kaga jalan kenapa, rupanya koe cuman mainin opacity doang. Kaget aku kenapa tiba-tiba kaga jalan
+            // awoakwoakoa
+            setTimeout(() => {
+                document.body.style.overflow = 'auto'
+                document.querySelector('.entry-container').style.display = 'none'
+                AOS.init()
+            }, 700);
+        })
+        sessionStorage.setItem('entry',false)
+    }
+    else{
+        document.body.style.overflow = 'auto'
+        entryContainer.style.display = 'none'
         AOS.init()
-    })
+    }
+    sessionStorage.clear()
 
     // Function Masyuuuuddd AH CAPEK AKU BANGKEEE
 
