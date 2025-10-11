@@ -718,23 +718,20 @@ nav {
 
 /* entry */
 
-
-
-
 svg {
-  z-index: 3;
-  opacity: 0;
-  animation: pageIn 5s forwards;
+    z-index: 3;
+    opacity: 0;
+    animation: pageIn 5s forwards;
 }
 
- svg text {
-  text-transform: uppercase;
-  font-family: "Nunito", sans-serif;
-  font-weight: bold;
-  font-size: 16rem;
-  animation: pageIn 5s ease forwards, stroke 3.5s infinite alternate;
-  stroke-width: 3;
-  stroke: white;
+svg text {
+    text-transform: uppercase;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-size: 16rem;
+    animation: pageIn 5s ease forwards, stroke 3.5s infinite alternate;
+    stroke-width: 3;
+    stroke: white;
 }
 
 @keyframes pageIn {
