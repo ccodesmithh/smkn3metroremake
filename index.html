@@ -656,6 +656,8 @@
     })
     document.querySelector('.btn-masuk').addEventListener('click',function(){
         document.querySelector('.entry-container').style.opacity = '0'
+        // Bangke ku kira tombol yang lain kaga jalan kenapa, rupanya koe cuman mainin opacity doang. Kaget aku kenapa tiba-tiba kaga jalan
+        document.querySelector('.entry-container').style.display = 'none'
         AOS.init()
     })
 
@@ -705,7 +707,7 @@
         } catch (error) {
             // Error Handling
             console.error("Kaga bisa generate wak! Error:", error);
-            document.getElementById('messages').innerHTML += `<p style="color: red;">Ada yang salah dah keknya. Error: Layanan Masyud sedang dinonaktifkan.</p>`;
+            document.getElementById('messages').innerHTML += `<p style="color: red;">Ada yang salah dah keknya. Error: ${error.message}</p>`;
         }
     });
 
