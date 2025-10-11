@@ -6,8 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let p2 = document.querySelectorAll('.p2')
     let Bt = document.querySelectorAll('.Bt')
     let dotsContainer = document.querySelector('.dots-container')
+
     let nextBtn = document.querySelector('.nav.next')
     let prevBtn = document.querySelector('.nav.prev')
+
 
     let currentIndex = 0
     let autoPlayInterval
@@ -42,6 +44,18 @@ document.addEventListener('DOMContentLoaded', function() {
         Bt[index].classList.remove('animateBt')
 
     }
+    slidlay.addEventListener('mouseover', function () {
+        if (window.innerWidth > 690){
+            nextBtn.style.opacity = '1'
+            prevBtn.style.opacity = '1'
+        }
+    })
+    slidlay.addEventListener('mouseout', function () {
+        if (window.innerWidth > 690){
+            nextBtn.style.opacity = '0'
+            prevBtn.style.opacity = '0'
+        }
+    })
 
     function nextSlider() {
         currentIndex = (currentIndex + 1) % sliders.length
@@ -52,6 +66,14 @@ document.addEventListener('DOMContentLoaded', function() {
         currentIndex = (currentIndex - 1 + sliders.length) % sliders.length
         showSlider(currentIndex)
     }
+    nextBtn.addEventListener('click', () => {
+    nextSlider()
+    resetAutoPlay()
+    })
+    prevBtn.addEventListener('click', () => {
+        prevSlider()
+        resetAutoPlay()
+    })
 
     function startAutoPlay() {
         autoPlayInterval = setInterval(nextSlider, 5000)
@@ -78,3 +100,4 @@ document.addEventListener('DOMContentLoaded', function() {
     createDots()
     startAutoPlay()
 });
+
