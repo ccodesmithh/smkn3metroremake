@@ -317,7 +317,11 @@
         }
     }
 
-    @keyframes bounce{
+    
+    .bounce{
+        animation: bounceS 1s linear infinite;
+    }
+    @keyframes bounceS{
        0%, 100% {
             transform: translateX(5px);
             animation-timing-function: 
@@ -331,9 +335,132 @@
         }
     }
 
-    .bounce{
-        animation: bounce 1s linear infinite;
+    .entry-container{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        z-index: 1010101;
     }
+    .entry-layout{
+        position: fixed;
+        width: 100%;
+        z-index: 12121212;
+        height: 100vh;
+        display: none;
+        transition: all 1s;
+    }
+
+
+
+
+    /* === EXIT ANIMATIONS === */
+        @keyframes containerExit {
+        0% {
+            opacity: 1;
+            transform: scale(1) rotateX(0deg);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(0.9) rotateX(10deg);
+        }
+        }
+        .entry-container.exit {
+        animation: containerExit 0.8s ease forwards;
+        }
+
+        
+        .logo-container.exit {
+            animation-delay: 0.3s;
+            opacity: 0;
+            perspective: 1000px;
+        animation: logoExit 1.4s cubic-bezier(0.84, 1.56, 0.64, 1) forwards;
+        }
+
+        @keyframes logoExit {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(1) rotateX(0deg) rotateZ(0deg);
+            }
+
+            75% {
+                opacity: 1;
+                transform: translateY(4px) scale(0.92) rotateX(10deg) rotateZ(-1deg);
+            }
+
+            100% {
+                opacity: 0;
+                filter: blur(1px);
+                transform: translateY(-70px) scale(0.4) rotateX(90deg) rotateZ(-20deg);
+            }
+        }
+
+
+        @keyframes titleExit {
+       100% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9) rotateX(45deg);
+        }
+        80% {
+            opacity: 0.5;
+            transform: translateY(-8px) scale(1.03) rotateX(-5deg);
+        }
+        60% {
+            opacity: 1;
+            transform: translateY(3px) scale(0.99) rotateX(2deg);
+        }
+        0% {
+            opacity: 1;
+            transform: translateY(0) scale(1) rotateX(0deg);
+        }
+        }
+        .title-container.exit {
+        animation: titleExit 1.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        @keyframes buttonExit {
+        to {
+            opacity: 0;
+            transform: translateY(100px) scale(0.7);
+        }
+        }
+        .button-container.exit {
+        animation: buttonExit 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        .gr1.exit, .gr2.exit{
+            animation: garisExit 1.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        @keyframes garisExit{
+             100% {
+                transform: scaleX(0.1);
+            }
+
+            0% {
+                transform: scaleX(1);
+            }
+        }
+
+        .printilan.swap{
+            
+            animation: printilan 2.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        .printilan{
+            animation-delay: 0.5s;
+            transition-delay: 1s;
+        }
+        @keyframes printilan{
+            0% {
+                transform: scale(1);
+            }
+             100% {
+                opacity: 0;
+                transform: scale(10);
+            }
+
+        }
     </style>
 <style>
    @keyframes fadeIn {
@@ -387,6 +514,7 @@
         .lope:active{
             transform: scale(1.3)  !important;
         }
+        
 </style>
 </head>
 <body>
@@ -425,51 +553,53 @@
 
     <!-- entry animation -->
 
-    <div class="entry-container min-h-screen flex flex-col items-center justify-between bg-neutral-200 px-4 py-8 relative overflow-hidden">
-        <div class="absolute top-1/3 right-10 w-8 h-8 bg-emerald-400/30 rounded-full animate-bounce-slow"></div>
-        <div class="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-green-300 to-teal-200 rounded-full blur-3xl opacity-40 animate-floatReverse"></div>
-        <div class="absolute top-40 right-20 w-20 h-20 border-4 border-emerald-400/30 rounded-full animate-floatMedium"></div>
-        <div class="absolute bottom-32 left-1/4 w-12 h-12 bg-green-400/20 rounded-lg animate-spin-slow"></div>
-        <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-green-200 to-emerald-300 rounded-full blur-3xl opacity-40 animate-float"></div>
-        <div class="absolute top-1/2 left-1/4 w-64 h-64 bg-gradient-to-br from-emerald-200 to-green-200 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-        <div class="absolute top-20 left-10 w-16 h-16 border-4 border-green-400/30 rounded-lg animate-floatSlow rotate-12"></div>
-        <div class="absolute bottom-1/4 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent animate-shimmerReverse"></div>
-        <div class="absolute top-1/4 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-green-400/30 to-transparent animate-shimmer"></div>
-        <div class="absolute top-2/3 left-16 w-14 h-14 border-4 border-green-500/30 rounded-full animate-pulse"></div>
-        <div class="absolute bottom-20 right-1/3 w-24 h-24 border-4 border-teal-400/30 rotate-45 animate-floatSlow"></div>
+    <div class="entry-layout overflow-hidden">
+        <div class="entry-container min-h-screen  bg-neutral-200 px-4 py-8 relative overflow-hidden">
+            <div class="printilan absolute top-1/3 right-10 w-8 h-8 bg-emerald-400/30 rounded-full animate-bounce-slow"></div>
+            <div class="printilan absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-green-300 to-teal-200 rounded-full blur-3xl opacity-40 animate-floatReverse"></div>
+            <div class="printilan absolute top-40 right-20 w-20 h-20 border-4 border-emerald-400/30 rounded-full animate-floatMedium"></div>
+            <div class="printilan absolute bottom-32 left-1/4 w-12 h-12 bg-green-400/20 rounded-lg animate-spin-slow"></div>
+            <div class="printilan absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-green-200 to-emerald-300 rounded-full blur-3xl opacity-40 animate-float"></div>
+            <div class="printilan absolute top-1/2 left-1/4 w-64 h-64 bg-gradient-to-br from-emerald-200 to-green-200 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+            <div class="printilan absolute top-20 left-10 w-16 h-16 border-4 border-green-400/30 rounded-lg animate-floatSlow rotate-12"></div>
+            <div class="printilan absolute bottom-1/4 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent animate-shimmerReverse"></div>
+            <div class="printilan absolute top-1/4 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-green-400/30 to-transparent animate-shimmer"></div>
+            <div class="printilan absolute top-2/3 left-16 w-14 h-14 border-4 border-green-500/30 rounded-full animate-pulse"></div>
+            <div class="printilan absolute bottom-20 right-1/3 w-24 h-24 border-4 border-teal-400/30 rotate-45 animate-floatSlow"></div>
 
 
-    <div class="flex-1 flex flex-col items-center justify-center z-10">
-        <div class="flex flex-col items-center gap-6 max-w-3xl">
-                <div class="animate-logoEntrance3D">
-                    <div class="group relative">
-                        <div class="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-green-500 rounded-tl-lg"></div>
-                        <div class="absolute -bottom-2 -right-2 w-8 h-8 border-b-4 border-r-4 border-green-500 rounded-br-lg"></div>
-                        <div class="absolute -inset-4 bg-gradient-to-r from-green-400 to-emerald-500 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 animate-pulse"></div>
-                        <div class="absolute inset-0 bg-gradient-to-br from-white to-gray-100 rounded-2xl shadow-2xl transform group-hover:scale-105 transition-all duration-500"></div>
-                        <div class="relative p-6 bg-white rounded-2xl">
-                            <img alt="Logo SMK N 3 Metro" class="w-52 h-52 object-contain drop-shadow-xl transform group-hover:rotate-3 transition-transform duration-500" src="https://customer-assets.emergentagent.com/job_smkn3-metro-landing/artifacts/bonhgpe2_6816545e702a7.webp">
-                        </div>
-                    </div>
-                </div>
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-center animate-titleEntrance3D relative">
-                    <span class="relative inline-block bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 bg-clip-text text-transparent animate-gradientShift">
-                        SMK N 3 METRO
-                        <span class="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-green-400 via-green-600 to-green-400 transform scale-x-0 animate-underlineGrow rounded-full"></span>
-                        <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-green-300 transform scale-x-0 animate-underlineGrow animation-delay-200 rounded-full"></span>
-                    </span>
-                </h1>
-                <div class="animate-buttonEntrance3D animation-delay-800">
-                    <div class="relative group">
-                        <div class="absolute inset-0 bg-green-400 rounded-xl blur-lg opacity-50 group-hover:opacity-70 group-hover:scale-110 transition-all duration-500 animate-pulse"></div>
-                        <button class="inline-flex btn-masuk items-center justify-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-primary/90 h-9 relative bg-gradient-to-r from-green-600 via-green-700 to-green-600 hover:from-green-700 hover:via-green-800 hover:to-green-700 text-white px-12 py-7 text-lg font-semibold rounded-xl shadow-2xl transition-all duration-500 hover:shadow-green-500/60 hover:scale-110 hover:-translate-y-2 overflow-hidden">
-                            <span class="relative z-10 flex items-center gap-2">
-                                Masuk
-                                <span class="inline-block bounce">→</span>
+            <div class="flex-1 flex flex-col items-center justify-center z-10">
+                <div class="flex flex-col items-center gap-6 max-w-3xl">
+                        <div class="logo-container animate-logoEntrance3D">
+                            <div class="group relative">
+                                <div class="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-green-500 rounded-tl-lg"></div>
+                                <div class="absolute -bottom-2 -right-2 w-8 h-8 border-b-4 border-r-4 border-green-500 rounded-br-lg"></div>
+                                <div class="absolute -inset-4 bg-gradient-to-r from-green-400 to-emerald-500 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 animate-pulse"></div>
+                                <div class="absolute inset-0 bg-gradient-to-br from-white to-gray-100 rounded-2xl shadow-2xl transform group-hover:scale-105 transition-all duration-500"></div>
+                                <div class="relative p-6 bg-white rounded-2xl">
+                                    <img alt="Logo SMK N 3 Metro" class="w-52 h-52 object-contain drop-shadow-xl transform group-hover:rotate-3 transition-transform duration-500" src="https://customer-assets.emergentagent.com/job_smkn3-metro-landing/artifacts/bonhgpe2_6816545e702a7.webp">
+                                </div>
+                            </div>
+                        </div> 
+                        <h1 class="title-container text-4xl md:text-6xl lg:text-7xl font-bold text-center animate-titleEntrance3D relative">
+                            <span class="relative inline-block bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 bg-clip-text text-transparent">
+                                SMK N 3 METRO
+                                <span class="gr1 absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-green-400 via-green-600 to-green-400 transform scale-x-0 animate-underlineGrow rounded-full"></span>
+                                <span class="gr2 absolute -bottom-1 left-0 w-full h-0.5 bg-green-300 transform scale-x-0 animate-underlineGrow animation-delay-200 rounded-full"></span>
                             </span>
-                            <span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
-                        </button>
-                    </div>
+                        </h1>
+                         <div class="button-container animate-buttonEntrance3D animation-delay-800">
+                            <div class="relative group">
+                                <div class="absolute inset-0 bg-green-400 rounded-xl blur-lg opacity-50 group-hover:opacity-70 group-hover:scale-110 transition-all duration-500 animate-pulse"></div>
+                                <button class="inline-flex btn-masuk items-center justify-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-primary/90 h-9 relative bg-gradient-to-r from-green-600 via-green-700 to-green-600 hover:from-green-700 hover:via-green-800 hover:to-green-700 text-white px-12 py-7 text-lg font-semibold rounded-xl shadow-2xl transition-all duration-500 hover:shadow-green-500/60 hover:scale-110 hover:-translate-y-2 overflow-hidden">
+                                    <span class="relative z-10 flex items-center gap-2">
+                                        Masuk
+                                        <span class="inline-block bounce">→</span>
+                                    </span>
+                                    <span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+                                </button>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -986,21 +1116,45 @@
             el.removeAttribute('data-aos-delay')
         }
     })
-    
+
+
+    // entry  
     entry = sessionStorage.getItem('entry')
-    const entryContainer = document.querySelector('.entry-container')
+    const entryContainer = document.querySelector('.entry-layout')
+    const logo = document.querySelector('.logo-container')
+    const title = document.querySelector('.title-container')
+    const button = document.querySelector('.button-container')
+    const printilan = document.querySelectorAll('.printilan')
+    const gr1 = document.querySelector('.gr1')
+    const gr2 = document.querySelector('.gr2')
     if(!entry){
-        entryContainer.style.display = 'flex'
+        entryContainer.style.display = 'block'
+         
         document.body.style.overflow = ''
         document.querySelector('.btn-masuk').addEventListener('click',function(){
-            document.querySelector('.entry-container').style.opacity = '0'
+            logo.classList.remove('animate-logoEntrance3D')
+            title.classList.remove('animate-titleEntrance3D')
+            button.classList.remove('animate-buttonEntrance3D')
+
+            logo.classList.add('exit')
+            title.classList.add('exit')
+            button.classList.add('exit')
+            gr1.classList.add('exit')
+            gr2.classList.add('exit')
+            
+            setTimeout(() => {
+                printilan.forEach(el =>{
+                    el.classList.add('swap')
+                })
+                entryContainer.style.opacity = '0'
+                AOS.init()
+            }, 1100);
             // Bangke ku kira tombol yang lain kaga jalan kenapa, rupanya koe cuman mainin opacity doang. Kaget aku kenapa tiba-tiba kaga jalan
             // awoakwoakoa
             setTimeout(() => {
                 document.body.style.overflow = 'auto'
-                document.querySelector('.entry-container').style.display = 'none'
-                AOS.init()
-            }, 700);
+                entryContainer.style.display = 'none'
+            }, 1500);
         })
         sessionStorage.setItem('entry',false)
     }
