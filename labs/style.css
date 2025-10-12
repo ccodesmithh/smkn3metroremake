@@ -127,3 +127,13 @@ body{
     background-color: blue;
     transform: scale(1.2);
 }
+
+#follower {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    border-radius: 50%; /* Makes it a circle */
+    pointer-events: none; /* Prevents the div from interfering with mouse events */
+    transition: transform 0.1s ease-out; /* Optional: for smooth movement */
+}

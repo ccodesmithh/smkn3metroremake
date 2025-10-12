@@ -9,6 +9,16 @@ let prevBtn = document.querySelector('.nav.prev')
 let currentIndex = 0
 let autoPlayInterval
 
+document.addEventListener('mousemove', function(e) {
+    const follower = document.getElementById('follower');
+    // Adjust for centering the follower on the cursor
+    const followerWidth = follower.offsetWidth;
+    const followerHeight = follower.offsetHeight;
+
+    follower.style.left = (e.clientX - followerWidth / 2) + 'px';
+    follower.style.top = (e.clientY - followerHeight / 2) + 'px';
+});
+
 function showSlider(index) {
     sliders.forEach((slider, i) =>{
         slider.classList.remove('active')
