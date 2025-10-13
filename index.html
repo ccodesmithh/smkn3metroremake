@@ -1180,9 +1180,11 @@
             gr1.classList.add('exit')
             gr2.classList.add('exit')
             
-            printilan.forEach(el =>{
-                el.classList.add('swap')
-            })
+            printilan.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('swap');
+                }, index * 50); // setiap elemen jeda 50ms setelah elemen sebelumnya
+            });
             setTimeout(() => {
                 entryContainer.style.opacity = '0'
                 AOS.init()
