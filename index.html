@@ -1186,9 +1186,9 @@
                 }, index * 50); // setiap elemen jeda 50ms setelah elemen sebelumnya
             });
             setTimeout(() => {
-                entryContainer.style.opacity = '0'
                 AOS.init()
-            }, 1700);
+                entryContainer.style.opacity = '0'
+            }, 1500);
             // Bangke ku kira tombol yang lain kaga jalan kenapa, rupanya koe cuman mainin opacity doang. Kaget aku kenapa tiba-tiba kaga jalan
             // awoakwoakoa
             setTimeout(() => {
