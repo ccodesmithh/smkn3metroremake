@@ -525,12 +525,26 @@
             z-index: 999;
             display: none;
         }
+        #follower2 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border-radius: 50%; 
+            pointer-events: none; 
+            transition: transform 0.1s ease-out; 
+            z-index: 999;
+            display: none;
+        }
 </style>
 </head>
 <body>
     <!-- Easter Egg -->
     <div id="follower">
         <img src="./images/Radit.jpeg" alt="">
+    </div>
+    <div id="follower2">
+        <video src="./videos/e1.mp4" autoplay loop></video>
     </div>
     <!-- Chat Bubble -->
     <div class="chat-bubble" id="chatBubble" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="1000" data-aos-once="true">
@@ -1194,6 +1208,14 @@
         follower.style.left = (e.pageX - followerWidth / 2) + 'px';
         follower.style.top = (e.pageY - followerHeight / 2) + 'px';
     });
+    document.addEventListener('mousemove', function(e) {
+        const follower = document.getElementById('follower2');
+        const followerWidth = follower.offsetWidth;
+        const followerHeight = follower.offsetHeight;
+
+        follower.style.left = (e.pageX - followerWidth / 2) + 'px';
+        follower.style.top = (e.pageY - followerHeight / 2) + 'px';
+    });
 
     // Function Masyuuuuddd AH CAPEK AKU BANGKEEE
 
@@ -1222,6 +1244,13 @@
             messagesDiv.appendChild(aiP);
 
             messagesDiv.scrollTop = messagesDiv.scrollHeight;
+            return;
+        } else if (userMessage.trim() === "Radit Love Asih") {
+            document.getElementById('follower2').style.display = 'block';
+
+            const aiP = document.createElement('p');
+            aiP.innerHTML = `<strong>Masyud:</strong> Cihuuyyy Radit Love Asih! 💗`;
+            messagesDiv.appendChild(aiP);
             return;
         }
 
