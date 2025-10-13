@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMK Negeri 3 Metro - Beranda</title>
+    <!-- icon -->
+    <link rel="shortcut icon" href="https://smkn3metro.sch.id/storage/uploads/2025/05/6816545e702a7.webp" type="image/x-icon">
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css"> 
+    <!-- cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link href="https://cdn.bootcdn.net/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- style internal -->
     <style type="text/tailwindcss">
         @layer utilities {
             .perspective-1000 {
@@ -444,18 +450,15 @@
         }
 
         .printilan.swap{
-            
+            animation-delay: 0.8s !important;
             animation: printilan 2.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-        }
-        .printilan{
-            transition-delay: 1s;
         }
         @keyframes printilan{
             0% {
                 transform: scale(1);
             }
              100% {
-                opacity: 1;
+                opacity: 0;
                 transform: scale(10);
             }
 
@@ -989,8 +992,9 @@
 
 
     <!-- maps -->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.905025881581!2d105.32617358396485!3d-5.119005228343225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40bc1d176fd9af%3A0x804b3b4145837ec4!2sSMK%20Negeri%203%20Metro!5e0!3m2!1sid!2sid!4v1760352533379!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+    <div class="maps flex justify-center ">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.905025881581!2d105.32617358396485!3d-5.119005228343225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40bc1d176fd9af%3A0x804b3b4145837ec4!2sSMK%20Negeri%203%20Metro!5e0!3m2!1sid!2sid!4v1760352533379!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
     <!-- Footer -->
     <footer>
         <div class="footer-container">
@@ -1176,10 +1180,10 @@
             gr1.classList.add('exit')
             gr2.classList.add('exit')
             
+            printilan.forEach(el =>{
+                el.classList.add('swap')
+            })
             setTimeout(() => {
-                printilan.forEach(el =>{
-                    el.classList.add('swap')
-                })
                 entryContainer.style.opacity = '0'
                 AOS.init()
             }, 1700);
