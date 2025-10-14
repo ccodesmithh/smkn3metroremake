@@ -1208,7 +1208,6 @@
     }
     sessionStorage.clear()
 
-    // Easter Egg
     document.addEventListener('mousemove', function(e) {
         const follower = document.getElementById('follower');
         const followerWidth = follower.offsetWidth;
@@ -1259,6 +1258,11 @@
 
             const aiP = document.createElement('p');
             aiP.innerHTML = `<strong>Masyud:</strong> Cihuuyyy Radit Love Asih! 💗`;
+            messagesDiv.appendChild(aiP);
+            return;
+        } else if (userMessage.trim() === "RNA") {
+            window.open('./others/html/bang-udah-bang.html');
+            aiP.innerHTML = `<strong>Masyud:</strong> Anjay nemuin easter egg (lagi)`;
             messagesDiv.appendChild(aiP);
             return;
         }
