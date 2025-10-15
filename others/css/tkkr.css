@@ -9,7 +9,7 @@ body::-webkit-scrollbar {
 }
 
 html {
-    background-image: url(https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2340);
+    background-image: url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2344);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -31,12 +31,16 @@ body {
     position: relative;
     overflow: hidden;
 }
+.containerJ{
+    margin: 5rem 7rem;
+    display: flex;
+    justify-content: center;
+}
 
 /* Left Container */
 .left-container {
     flex: 1;
-    padding-left: 140px;
-    padding-top: 80px;
+
     z-index: 2;
     max-width: 1100px;
 }
@@ -216,16 +220,16 @@ body {
 }
 
 .student-badge {
+    background: #00a86b;
+    color: white;
     position: absolute;
     top: 550px;
-    background: white;
     padding: 8px 28px;
     border-radius: 25px;
-    border: solid 2px #008e24;
+    border: solid 2px #327342;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     z-index: 10;
     font-weight: 600;
-    color: #1a1a2e;
     font-size: 15px;
 }
 
@@ -310,7 +314,12 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 780px) {
+
+    .containerJ{
+        display: block;
+        margin: 0;
+    }
     .right-container {
         min-height: 350px;
     }
