@@ -108,9 +108,9 @@
         </nav>
     </header>
     <aside id="sidebar" class="bg-white w-full md:w-64 flex flex-col transition-all fixed right-0 z-[100] ease-in-out hidden transform translate-x-full">
-        <div class="p-4 flex justify-between items-center border-b border-gray-200 dark:border-gray-700">
-            <h1 class="text-2xl font-bold text-indigo-800 dark:text-white">Dashboard</h1>
-            <button id="closeSidebar" class="text-gray-500 hover:text-indigo-800 dark:text-gray-400 dark:hover:text-white focus:outline-none">
+        <div class="p-4 flex justify-between items-center border-b border-gray-200">
+            <h1 class="text-2xl font-bold text-indigo-800">Dashboard</h1>
+            <button id="closeSidebar" class="text-gray-500 hover:text-indigo-800 focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -121,7 +121,7 @@
         <nav class="flex-1 overflow-y-auto w-full">
             <ul class="p-4 space-y-2 md:w-64 w-full">
                 <li class="animate-fade-in " style="animation-delay: 0.1s;">
-                    <a href="../../index.html" class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover" onclick="sessionStorage.setItem('entry',false)"> <!--entry diset jadi 'false' dan tidak kosong-->
+                    <a href="../../index.html" class="flex items-center p-2 text-gray-700 rounded-lg hover:bg-indigo-100 transition-colors duration-300 menu-item-hover" onclick="sessionStorage.setItem('entry',false)"> <!--entry diset jadi 'false' dan tidak kosong-->
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                         </svg>
@@ -129,13 +129,13 @@
                     </a>
                 </li>
                 <li class="animate-fade-in" style="animation-delay: 0.2s;">
-                    <a href="#" class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover">
+                    <a href="#" class="flex items-center p-2 text-gray-700 rounded-lg hover:bg-indigo-100 transition-colors duration-300 menu-item-hover">
                         <i class="fas fa-users" style="margin: 0px 15px 0px 5px;"></i>
                         About us
                     </a>
                 </li>
                 <li class="animate-fade-in" style="animation-delay: 0.3s;">
-                    <a href="../../index.html#message" class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover" onclick="sessionStorage.setItem('entry',false)"><!--entry diset jadi 'false' dan tidak kosong-->
+                    <a href="../../index.html#message" class="flex items-center p-2 text-gray-700  rounded-lg hover:bg-indigo-100 transition-colors duration-300 menu-item-hover" onclick="sessionStorage.setItem('entry',false)"><!--entry diset jadi 'false' dan tidak kosong-->
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
@@ -143,7 +143,7 @@
                     </a>
                 </li>
                 <li class="animate-fade-in" style="animation-delay: 0.3s;">
-                    <a href="./hall-of-fame.html" class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover">
+                    <a href="./hall-of-fame.html" class="flex items-center p-2 text-gray-700 rounded-lg hover:bg-indigo-100 transition-colors duration-300 menu-item-hover">
                         <i class="fas fa-trophy" style="margin: 0px 15px 0px 5px;"></i>
                         Prestasi
                     </a>
@@ -607,18 +607,16 @@
         closeSidebarBtn.addEventListener('click', closeSidebar);
 
         // Toggle dark mode based on system preference
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.classList.add('dark');
-        }
+
 
         // Add hover effect to menu items
         const menuItems = document.querySelectorAll('.menu-item-hover');
         menuItems.forEach(item => {
             item.addEventListener('mouseenter', () => {
-                item.querySelector('svg').classList.add('text-indigo-800', 'dark:text-white');
+                item.querySelector('svg').classList.add('text-indigo-800');
             });
             item.addEventListener('mouseleave', () => {
-                item.querySelector('svg').classList.remove('text-indigo-800', 'dark:text-white');
+                item.querySelector('svg').classList.remove('text-indigo-800');
             });
         });
       
