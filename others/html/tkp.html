@@ -11,7 +11,8 @@
 </head>
 <body>
     <section class="container">
-        <div class="left-container">
+       <div class="containerJ">
+         <div class="left-container">
             <div class="major">
                 <div class="icon">
                     <i class='bx bx-gear'></i> 
@@ -59,10 +60,12 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-primary" onclick="history.back()">
+            <a href="../../index.html">
+                <button class="btn-primary" onclick="sessionStorage.setItem('entry',false)">
                 <i class='bx bx-arrow-back'></i> 
                 <span>Kembali ke Halaman Utama</span>
             </button>
+            </a>
         </div>
         <div class="right-container">
             <div class="circle">
@@ -70,6 +73,7 @@
             </div>
             <div class="student-badge">Teknik Konstruksi Pembangunan</div>
         </div>
+       </div>
     </section>
 </body>
 </html>
