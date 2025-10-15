@@ -8,27 +8,29 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/tkj.css">
+        <link href="https://cdn.bootcdn.net/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
 </head>
 <body>
     <section class="container">
-        <div class="containerJ">
+        <div class="containerJ" >
             <div class="left-container">
-            <div class="major">
+            <div class="major" data-aos="fade-right" data-aos-once="true" data-aos-delay="0" data-aos-duration="1000">
                 <div class="icon">
                     <i class='bx bx-gear'></i> 
                 </div>
                 <h4 class="majorCat">Teknik</h4>
             </div>
-            <div class="major-name">
+            <div class="major-name" data-aos="fade-right" data-aos-once="true" data-aos-delay="100" data-aos-duration="1000">
                 <h1>Teknik Komputer dan Jaringan</h1>
                 <div class="box"></div>
             </div>
-            <div class="description-container">
+            <div class="description-container" data-aos="fade-right" data-aos-once="true" data-aos-delay="200" data-aos-duration="1000">
                 <div class="description-text">
                     Program yang membekali siswa dengan keterampilan merancang, membangun, dan mengelola jaringan komputer. Program yang mempelajari tentang perakitan, perawatan dan perbaikan komputer. Tidak hanya itu di program ini lebih banyak lagi mempelajari tentang konfigurasi jaringan dan keamanan data, materi yang diberikan mengikuti perkembangan zaman yang dibimbing oleh tenaga pendidik profesional.
                 </div>
                 <div class="detail-container">
-                    <div class="detail-box">
+                    <div class="detail-box" data-aos="fade-up" data-aos-once="true" data-aos-delay="0" data-aos-duration="1000">
                         <div class="detail-content">
                             <div class="icon">
                                 <i class='bx bx-laptop'></i> 
@@ -43,7 +45,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="detail-box">
+                    <div class="detail-box" data-aos="fade-up" data-aos-once="true" data-aos-delay="200" data-aos-duration="1000">
                         <div class="detail-content">
                             <div class="icon">
                                 <i class='bx bx-group'></i> 
@@ -60,14 +62,14 @@
                     </div>
                 </div>
             </div>
-            <a href="../../index.html">
+            <a href="../../index.html" data-aos="fade-in" data-aos-once="true" data-aos-delay="0" data-aos-duration="1000" data-aos-anchor-placement="top">
                 <button class="btn-primary" onclick="sessionStorage.setItem('entry',false)">
                     <i class='bx bx-arrow-back'></i> 
                     <span>Kembali ke Halaman Utama</span>
                 </button>
             </a>
         </div>
-        <div class="right-container">
+        <div class="right-container" data-aos="fade-left" data-aos-once="true" data-aos-delay="0" data-aos-duration="1000">
             <div class="circle">
                 <img src="../../images/Rapi.jpeg" alt="Get Well Soon, Indonesia.">
             </div>
@@ -75,5 +77,9 @@
         </div>
         </div>
     </section>
+    <script src="https://cdn.bootcdn.net/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init()
+    </script>
 </body>
 </html>
