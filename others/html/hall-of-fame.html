@@ -829,10 +829,10 @@
         const menuItems = document.querySelectorAll('.menu-item-hover');
         menuItems.forEach(item => {
             item.addEventListener('mouseenter', () => {
-                item.querySelector('svg').classList.add('text-indigo-800', 'dark:text-white');
+                item.querySelector('svg').classList.add('text-indigo-800');
             });
             item.addEventListener('mouseleave', () => {
-                item.querySelector('svg').classList.remove('text-indigo-800', 'dark:text-white');
+                item.querySelector('svg').classList.remove('text-indigo-800');
             });
         });
       
