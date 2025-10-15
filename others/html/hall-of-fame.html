@@ -145,7 +145,7 @@
                     </a>
                 </li>
                 <li class="animate-fade-in" style="animation-delay: 0.3s;">
-                    <a href="../../index.html#message" class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover" onclick="sessionStorage.setItem('entry',false)"><!--entry diset jadi 'false' dan tidak kosong-->
+                    <a href="../../index.html#message" class="flex items-center p-2 text-gray-700 rounded-lg hover:bg-indigo-100 transition-colors duration-300 menu-item-hover" onclick="sessionStorage.setItem('entry',false)"><!--entry diset jadi 'false' dan tidak kosong-->
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
@@ -153,7 +153,7 @@
                     </a>
                 </li>
                 <li class="animate-fade-in" style="animation-delay: 0.3s;">
-                    <a href="#" class="flex items-center p-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors duration-300 menu-item-hover">
+                    <a href="#" class="flex items-center p-2 text-gray-700 rounded-lg hover:bg-indigo-100 transition-colors duration-300 menu-item-hover">
                         <i class="fas fa-trophy" style="margin: 0px 15px 0px 5px;"></i>
                         Prestasi
                     </a>
@@ -824,9 +824,6 @@
         closeSidebarBtn.addEventListener('click', closeSidebar);
 
         // Toggle dark mode based on system preference
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.classList.add('dark');
-        }
 
         // Add hover effect to menu items
         const menuItems = document.querySelectorAll('.menu-item-hover');
