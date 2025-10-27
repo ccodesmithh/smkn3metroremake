@@ -1277,7 +1277,8 @@
             });
 
             if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+                // throw new Error(`HTTP error! status: ${response.status}`);
+                throw new Error(`Masyud telah dinonaktifkan. Silakan hubungi developer untuk pengaktifan kembali.`);
             }
 
             const data = await response.json();
